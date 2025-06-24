@@ -5,4 +5,5 @@
     //  Created by Harsh Vardhan  Goswami  on 11/08/24.
     //
 #import <Foundation/Foundation.h>
-#import "NowPlaying.h"
+// Using Swift implementation instead of Objective-C
+// #import "NowPlaying.h"

@@ -20,7 +20,7 @@ class FullscreenMediaDetector: ObservableObject {
         }
     }
     
-    var nowPlaying: NowPlaying = .init()
+    var nowPlaying: NowPlaying = NowPlaying.sharedInstance
     
     init() {
         self.detector = MacroVisionKit.shared

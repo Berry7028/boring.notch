@@ -44,10 +44,10 @@ class MusicManager: ObservableObject {
     @Published var usingAppIconForArtwork: Bool = false
     var nowPlaying: NowPlaying
 
-    private let mediaRemoteBundle: CFBundle
-    private let MRMediaRemoteGetNowPlayingInfo: @convention(c) (DispatchQueue, @escaping ([String: Any]) -> Void) -> Void
-    private let MRMediaRemoteRegisterForNowPlayingNotifications: @convention(c) (DispatchQueue) -> Void
-    private let MRMediaRemoteGetNowPlayingApplicationIsPlaying: @convention(c) (DispatchQueue, @escaping (Bool) -> Void) -> Void
+    private var mediaRemoteBundle: CFBundle
+    private var MRMediaRemoteGetNowPlayingInfo: @convention(c) (DispatchQueue, @escaping ([String: Any]) -> Void) -> Void
+    private var MRMediaRemoteRegisterForNowPlayingNotifications: @convention(c) (DispatchQueue) -> Void
+    private var MRMediaRemoteGetNowPlayingApplicationIsPlaying: @convention(c) (DispatchQueue, @escaping (Bool) -> Void) -> Void
 
     private var distributedObservers: [NSObjectProtocol] = []
 
@@ -64,7 +64,7 @@ class MusicManager: ObservableObject {
     init?(vm: BoringViewModel) {
         self.vm = vm
         _detector = ObservedObject(wrappedValue: FullscreenMediaDetector())
-        nowPlaying = NowPlaying()
+        nowPlaying = NowPlaying.sharedInstance
 
         guard let bundle = CFBundleCreate(kCFAllocatorDefault, NSURL(fileURLWithPath: "/System/Library/PrivateFrameworks/MediaRemote.framework")),
               let MRMediaRemoteGetNowPlayingInfoPointer = CFBundleGetFunctionPointerForName(bundle, "MRMediaRemoteGetNowPlayingInfo" as CFString),
