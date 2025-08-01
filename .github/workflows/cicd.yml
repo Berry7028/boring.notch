@@ -1,5 +1,4 @@
-name: Build for macos  platform
-
+name: Build for macos  platform
 on:
   push:
     branches:
@@ -7,12 +6,11 @@ on:
   pull_request:
     branches:
       - '*'
-
+  workflow_dispatch:
 # https://stackoverflow.com/a/72408109/6942800
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
-
 jobs:
   build:
     name: Build boringNotch
