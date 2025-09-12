@@ -11,7 +11,6 @@ import EventKit
 import KeyboardShortcuts
 import LaunchAtLogin
 import LottieUI
-import Sparkle
 import SwiftUI
 import SwiftUIIntrospect
 
@@ -19,10 +18,7 @@ struct SettingsView: View {
     @StateObject var extensionManager = BoringExtensionManager()
     @State private var selectedTab = "General"
 
-    let updaterController: SPUStandardUpdaterController?
-
-    init(updaterController: SPUStandardUpdaterController? = nil) {
-        self.updaterController = updaterController
+    init() {
     }
 
     var body: some View {
@@ -97,15 +93,7 @@ struct SettingsView: View {
                 case "Extensions":
                     Extensions()
                 case "About":
-                    if let controller = updaterController {
-                        About(updaterController: controller)
-                    } else {
-                        // Fallback with a default controller
-                        About(
-                            updaterController: SPUStandardUpdaterController(
-                                startingUpdater: false, updaterDelegate: nil,
-                                userDriverDelegate: nil))
-                    }
+                    About()
                 default:
                     GeneralSettings()
                 }
@@ -678,7 +666,6 @@ struct CalendarSettings: View {
 
 struct About: View {
     @State private var showBuildNumber: Bool = false
-    let updaterController: SPUStandardUpdaterController
     @Environment(\.openWindow) var openWindow
     var body: some View {
         VStack {
@@ -709,7 +696,6 @@ struct About: View {
                     Text("Version info")
                 }
 
-                UpdaterSettingsView(updater: updaterController.updater)
 
                 HStack(spacing: 30) {
                     Spacer(minLength: 0)
@@ -758,7 +744,6 @@ struct About: View {
             //                openWindow(id: "onboarding")
             //            }
             //            .controlSize(.extraLarge)
-            CheckForUpdatesView(updater: updaterController.updater)
         }
         .navigationTitle("About")
     }
