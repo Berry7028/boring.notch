@@ -11,6 +11,7 @@ import Defaults
 import KeyboardShortcuts
 import Sparkle
 import SwiftUI
+import CoreAudio
 
 @main
 struct DynamicNotchApp: App {
@@ -153,6 +154,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
 
         coordinator.setupWorkersNotificationObservers()
+
+        // Start monitoring audio output device changes to detect AirPods connection
+        AudioDeviceMonitor.shared.start()
 
         NotificationCenter.default.addObserver(
             self,

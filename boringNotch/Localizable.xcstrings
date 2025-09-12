@@ -2332,8 +2332,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "About"
+            "state" : "translated",
+            "value" : "情報"
           }
         },
         "ko" : {
@@ -2831,8 +2831,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Add"
+            "state" : "translated",
+            "value" : "追加"
           }
         },
         "ko" : {
@@ -3009,8 +3009,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Add manually"
+            "state" : "translated",
+            "value" : "手動で追加"
           }
         },
         "ko" : {
@@ -3187,8 +3187,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Add new visualizer"
+            "state" : "translated",
+            "value" : "新しいビジュアライザーを追加"
           }
         },
         "ko" : {
@@ -3365,8 +3365,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Additional features"
+            "state" : "translated",
+            "value" : "追加機能"
           }
         },
         "ko" : {
@@ -4255,8 +4255,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Always hide in fullscreen"
+            "state" : "translated",
+            "value" : "フルスクリーン時は常に隠す"
           }
         },
         "ko" : {
@@ -4433,8 +4433,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Always show tabs"
+            "state" : "translated",
+            "value" : "常にタブを表示"
           }
         },
         "ko" : {
@@ -4611,8 +4611,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "App icon"
+            "state" : "translated",
+            "value" : "アプリアイコン"
           }
         },
         "ko" : {
@@ -4789,8 +4789,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Appearance"
+            "state" : "translated",
+            "value" : "外観"
           }
         },
         "ko" : {
@@ -4931,8 +4931,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Automatically check for updates"
+            "state" : "translated",
+            "value" : "自動的にアップデートを確認"
           }
         },
         "ko" : {
@@ -5109,8 +5109,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Automatically download updates"
+            "state" : "translated",
+            "value" : "アップデートを自動的にダウンロード"
           }
         },
         "ko" : {
@@ -5205,6 +5205,23 @@
         }
       }
     },
+    "Automatically switch displays" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatically switch displays"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ディスプレイを自動的に切り替える"
+          }
+        }
+      }
+    },
     "Battery" : {
       "localizations" : {
         "en" : {
@@ -5251,8 +5268,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Battery"
+            "state" : "translated",
+            "value" : "バッテリー"
           }
         },
         "ko" : {
@@ -5429,8 +5446,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Battery Information"
+            "state" : "translated",
+            "value" : "バッテリー情報"
           }
         },
         "ko" : {
@@ -5880,6 +5897,9 @@
           }
         }
       }
+    },
+    "Beta" : {
+
     },
     "Boost your productivity with Clipboard Manager" : {
       "localizations" : {
@@ -6380,6 +6400,22 @@
         }
       }
     },
+    "Boring Notch Settings" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Boring Notch Settings"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Boring Notch の設定"
+          }
+        }
+      }
+    },
     "boring.notch" : {
       "localizations" : {
         "en" : {
@@ -6568,8 +6604,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Both"
+            "state" : "translated",
+            "value" : "両方"
           }
         },
         "ko" : {
@@ -6746,8 +6782,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Calendar"
+            "state" : "translated",
+            "value" : "カレンダー"
           }
         },
         "ko" : {
@@ -6924,8 +6960,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Calendar access is denied. Please enable it in System Settings."
+            "state" : "translated",
+            "value" : "カレンダーへのアクセスが拒否されました。システム設定で有効にしてください。"
           }
         },
         "ko" : {
@@ -7102,8 +7138,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Calendars"
+            "state" : "translated",
+            "value" : "カレンダー"
           }
         },
         "ko" : {
@@ -7280,8 +7316,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Cancel"
+            "state" : "translated",
+            "value" : "キャンセル"
           }
         },
         "ko" : {
@@ -7778,8 +7814,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Check for Updates…"
+            "state" : "translated",
+            "value" : "アップデートを確認…"
           }
         },
         "ko" : {
@@ -8134,8 +8170,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Circle"
+            "state" : "translated",
+            "value" : "円"
           }
         },
         "ko" : {
@@ -8404,6 +8440,23 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Close"
+          }
+        }
+      }
+    },
+    "Close gesture" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close gesture"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "閉じるジェスチャ"
           }
         }
       }
@@ -8728,6 +8781,23 @@
         }
       }
     },
+    "Corner radius scaling" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Corner radius scaling"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "角丸のスケーリング"
+          }
+        }
+      }
+    },
     "Custom height" : {
       "localizations" : {
         "af" : {
@@ -8810,8 +8880,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Custom height"
+            "state" : "translated",
+            "value" : "カスタム高さ"
           }
         },
         "ko" : {
@@ -8988,8 +9058,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Custom music live activity animation"
+            "state" : "translated",
+            "value" : "カスタム音楽ライブアクティビティアニメーション"
           }
         },
         "ko" : {
@@ -9166,8 +9236,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Custom notch size - %.0f"
+            "state" : "translated",
+            "value" : "ノッチのカスタムサイズ - %.0f"
           }
         },
         "ko" : {
@@ -9344,8 +9414,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Custom vizualizers (Lottie)"
+            "state" : "translated",
+            "value" : "カスタムビジュアライザー（Lottie）"
           }
         },
         "ko" : {
@@ -9700,8 +9770,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Default"
+            "state" : "translated",
+            "value" : "デフォルト"
           }
         },
         "ko" : {
@@ -9878,8 +9948,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Description"
+            "state" : "translated",
+            "value" : "説明"
           }
         },
         "ko" : {
@@ -10056,8 +10126,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Disable"
+            "state" : "translated",
+            "value" : "無効化"
           }
         },
         "ko" : {
@@ -10554,8 +10624,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Download icon style"
+            "state" : "translated",
+            "value" : "ダウンロードアイコンのスタイル"
           }
         },
         "ko" : {
@@ -10696,8 +10766,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Download indicator style"
+            "state" : "translated",
+            "value" : "ダウンロードインジケータのスタイル"
           }
         },
         "ko" : {
@@ -10874,8 +10944,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Download indicators"
+            "state" : "translated",
+            "value" : "ダウンロードインジケータ"
           }
         },
         "ko" : {
@@ -11016,8 +11086,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Downloads"
+            "state" : "translated",
+            "value" : "ダウンロード"
           }
         },
         "ko" : {
@@ -11646,6 +11716,91 @@
         }
       }
     },
+    "Enable blur effect behind album art" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable blur effect behind album art"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アルバムアートの背後にブラー効果を有効にする"
+          }
+        }
+      }
+    },
+    "Enable boring mirror" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable boring mirror"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Boring Mirror を有効にする"
+          }
+        }
+      }
+    },
+    "Enable colored spectrograms" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable colored spectrograms"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カラーのスペクトログラムを有効にする"
+          }
+        }
+      }
+    },
+    "Enable gestures" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable gestures"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ジェスチャを有効にする"
+          }
+        }
+      }
+    },
+    "Enable haptics" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable haptics"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "触覚フィードバックを有効にする"
+          }
+        }
+      }
+    },
     "Enable HUD replacement" : {
       "localizations" : {
         "af" : {
@@ -12002,6 +12157,40 @@
         }
       }
     },
+    "Enable Safari Downloads" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable Safari Downloads"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Safari のダウンロードを有効にする"
+          }
+        }
+      }
+    },
+    "Enable shelf" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable shelf"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シェルフを有効にする"
+          }
+        }
+      }
+    },
     "Enable sneak peek" : {
       "localizations" : {
         "af" : {
@@ -12176,6 +12365,23 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Enable sneak peek"
+          }
+        }
+      }
+    },
+    "Enable window shadow" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable window shadow"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウィンドウの影を有効にする"
           }
         }
       }
@@ -12760,8 +12966,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Exclude apps"
+            "state" : "translated",
+            "value" : "除外するアプリ"
           }
         },
         "ko" : {
@@ -13034,6 +13240,23 @@
         }
       }
     },
+    "Extend hover area" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extend hover area"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ホバー領域を拡張"
+          }
+        }
+      }
+    },
     "Extensions" : {
       "localizations" : {
         "af" : {
@@ -13116,8 +13339,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Extensions"
+            "state" : "translated",
+            "value" : "拡張機能"
           }
         },
         "ko" : {
@@ -13436,8 +13659,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "General"
+            "state" : "translated",
+            "value" : "一般"
           }
         },
         "ko" : {
@@ -13614,8 +13837,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Gesture control"
+            "state" : "translated",
+            "value" : "ジェスチャコントロール"
           }
         },
         "ko" : {
@@ -13792,8 +14015,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Gesture sensitivity"
+            "state" : "translated",
+            "value" : "ジェスチャ感度"
           }
         },
         "ko" : {
@@ -14468,8 +14691,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Gradient"
+            "state" : "translated",
+            "value" : "グラデーション"
           }
         },
         "ko" : {
@@ -14646,8 +14869,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Hide BoringNotch Options"
+            "state" : "translated",
+            "value" : "BoringNotch の非表示オプション"
           }
         },
         "ko" : {
@@ -14742,6 +14965,23 @@
         }
       }
     },
+    "Hide completed reminders" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hide completed reminders"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完了したリマインダーを非表示"
+          }
+        }
+      }
+    },
     "Hide only when NowPlaying app is in fullscreen" : {
       "localizations" : {
         "af" : {
@@ -14824,8 +15064,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Hide only when NowPlaying app is in fullscreen"
+            "state" : "translated",
+            "value" : "再生中のアプリがフルスクリーンのときのみ隠す"
           }
         },
         "ko" : {
@@ -15002,8 +15242,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Hierarchical"
+            "state" : "translated",
+            "value" : "階層"
           }
         },
         "ko" : {
@@ -15180,8 +15420,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "High"
+            "state" : "translated",
+            "value" : "高"
           }
         },
         "ko" : {
@@ -15536,8 +15776,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "HUD style"
+            "state" : "translated",
+            "value" : "HUD スタイル"
           }
         },
         "ko" : {
@@ -15714,8 +15954,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "HUDs"
+            "state" : "translated",
+            "value" : "HUD"
           }
         },
         "ko" : {
@@ -16070,8 +16310,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Inline"
+            "state" : "translated",
+            "value" : "インライン"
           }
         },
         "ko" : {
@@ -16248,8 +16488,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Installed extensions"
+            "state" : "translated",
+            "value" : "インストール済みの拡張機能"
           }
         },
         "ko" : {
@@ -16340,6 +16580,22 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Installed extensions"
+          }
+        }
+      }
+    },
+    "It will be supported later on." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It will be supported later on."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "後日対応予定です。"
           }
         }
       }
@@ -16522,6 +16778,23 @@
         }
       }
     },
+    "Launch at login" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Launch at login"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ログイン時に起動"
+          }
+        }
+      }
+    },
     "Lottie JSON URL" : {
       "localizations" : {
         "af" : {
@@ -16604,8 +16877,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Lottie JSON URL"
+            "state" : "translated",
+            "value" : "Lottie JSON の URL"
           }
         },
         "ko" : {
@@ -16782,8 +17055,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Low"
+            "state" : "translated",
+            "value" : "低"
           }
         },
         "ko" : {
@@ -17102,8 +17375,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Made with 🫶🏻 by not so boring not.people"
+            "state" : "translated",
+            "value" : "not so boring not.people によって🫶🏻を込めて作られました"
           }
         },
         "ko" : {
@@ -17636,8 +17909,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Match menubar height"
+            "state" : "translated",
+            "value" : "メニューバーの高さに合わせる"
           }
         },
         "ko" : {
@@ -17814,8 +18087,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Match real notch size"
+            "state" : "translated",
+            "value" : "実際のノッチサイズに合わせる"
           }
         },
         "ko" : {
@@ -18134,8 +18407,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Media"
+            "state" : "translated",
+            "value" : "メディア"
           }
         },
         "ko" : {
@@ -18312,8 +18585,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Media change with horizontal gestures"
+            "state" : "translated",
+            "value" : "水平ジェスチャでメディアを切り替え"
           }
         },
         "ko" : {
@@ -18490,8 +18763,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Media controls"
+            "state" : "translated",
+            "value" : "メディアコントロール"
           }
         },
         "ko" : {
@@ -18632,8 +18905,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Media inactivity timeout"
+            "state" : "translated",
+            "value" : "メディア非アクティブのタイムアウト"
           }
         },
         "ko" : {
@@ -18774,8 +19047,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Media playback live activity"
+            "state" : "translated",
+            "value" : "メディア再生のライブアクティビティ"
           }
         },
         "ko" : {
@@ -18952,8 +19225,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Media Source"
+            "state" : "translated",
+            "value" : "メディアソース"
           }
         },
         "ko" : {
@@ -19130,8 +19403,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Medium"
+            "state" : "translated",
+            "value" : "中"
           }
         },
         "ko" : {
@@ -19222,6 +19495,23 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Medium"
+          }
+        }
+      }
+    },
+    "Menubar icon" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menubar icon"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メニューバーアイコン"
           }
         }
       }
@@ -19486,8 +19776,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Minimum hover duration"
+            "state" : "translated",
+            "value" : "最小ホバー時間"
           }
         },
         "ko" : {
@@ -19842,8 +20132,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Mirror shape"
+            "state" : "translated",
+            "value" : "ミラーの形状"
           }
         },
         "ko" : {
@@ -20198,8 +20488,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Music Source"
+            "state" : "translated",
+            "value" : "ミュージックソース"
           }
         },
         "ko" : {
@@ -20554,8 +20844,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Name"
+            "state" : "translated",
+            "value" : "名前"
           }
         },
         "ko" : {
@@ -20910,8 +21200,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Never hide"
+            "state" : "translated",
+            "value" : "非表示にしない"
           }
         },
         "ko" : {
@@ -21088,8 +21378,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "No custom animation available"
+            "state" : "translated",
+            "value" : "カスタムアニメーションはありません"
           }
         },
         "ko" : {
@@ -21266,8 +21556,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "No custom visualizer"
+            "state" : "translated",
+            "value" : "カスタムビジュアライザーはありません"
           }
         },
         "ko" : {
@@ -21622,8 +21912,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "No excluded apps"
+            "state" : "translated",
+            "value" : "除外されたアプリはありません"
           }
         },
         "ko" : {
@@ -21800,8 +22090,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "No extension installed"
+            "state" : "translated",
+            "value" : "拡張機能がインストールされていません"
           }
         },
         "ko" : {
@@ -21978,8 +22268,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Non-notch display height"
+            "state" : "translated",
+            "value" : "ノッチなしディスプレイの高さ"
           }
         },
         "ko" : {
@@ -22334,8 +22624,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Notch behavior"
+            "state" : "translated",
+            "value" : "ノッチの挙動"
           }
         },
         "ko" : {
@@ -22512,8 +22802,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Notch display height"
+            "state" : "translated",
+            "value" : "ノッチ表示の高さ"
           }
         },
         "ko" : {
@@ -22690,8 +22980,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Notch Height"
+            "state" : "translated",
+            "value" : "ノッチの高さ"
           }
         },
         "ko" : {
@@ -23188,8 +23478,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Only app icon"
+            "state" : "translated",
+            "value" : "アプリアイコンのみ"
           }
         },
         "ko" : {
@@ -23330,8 +23620,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Only download icon"
+            "state" : "translated",
+            "value" : "ダウンロードアイコンのみ"
           }
         },
         "ko" : {
@@ -23508,8 +23798,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Open Calendar Settings"
+            "state" : "translated",
+            "value" : "カレンダーの設定を開く"
           }
         },
         "ko" : {
@@ -23600,6 +23890,23 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Open Calendar Settings"
+          }
+        }
+      }
+    },
+    "Open notch on hover" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open notch on hover"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ホバーでノッチを開く"
           }
         }
       }
@@ -23686,8 +23993,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Open Reminder Settings"
+            "state" : "translated",
+            "value" : "リマインダーの設定を開く"
           }
         },
         "ko" : {
@@ -23782,6 +24089,23 @@
         }
       }
     },
+    "Open shelf tab by default if items added" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open shelf tab by default if items added"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アイテム追加時にシェルフタブを既定で開く"
+          }
+        }
+      }
+    },
     "Percentage" : {
       "localizations" : {
         "en" : {
@@ -23828,8 +24152,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Percentage"
+            "state" : "translated",
+            "value" : "％表示"
           }
         },
         "ko" : {
@@ -24148,8 +24472,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Progress bar"
+            "state" : "translated",
+            "value" : "進行バー"
           }
         },
         "ko" : {
@@ -24326,8 +24650,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Progressbar style"
+            "state" : "translated",
+            "value" : "プログレスバーのスタイル"
           }
         },
         "ko" : {
@@ -24646,8 +24970,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Quit app"
+            "state" : "translated",
+            "value" : "アプリを終了"
           }
         },
         "ko" : {
@@ -24788,8 +25112,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Release name"
+            "state" : "translated",
+            "value" : "リリース名"
           }
         },
         "ko" : {
@@ -24966,8 +25290,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Remember last tab"
+            "state" : "translated",
+            "value" : "最後に開いたタブを記憶"
           }
         },
         "ko" : {
@@ -25144,8 +25468,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Reminder access is denied. Please enable it in System Settings."
+            "state" : "translated",
+            "value" : "リマインダーへのアクセスが拒否されました。システム設定で有効にしてください。"
           }
         },
         "ko" : {
@@ -25322,8 +25646,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Reminders"
+            "state" : "translated",
+            "value" : "リマインダー"
           }
         },
         "ko" : {
@@ -25500,8 +25824,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Restart"
+            "state" : "translated",
+            "value" : "再起動"
           }
         },
         "ko" : {
@@ -26212,8 +26536,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "selected"
+            "state" : "translated",
+            "value" : "選択済み"
           }
         },
         "ko" : {
@@ -26390,8 +26714,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Selected animation"
+            "state" : "translated",
+            "value" : "選択したアニメーション"
           }
         },
         "ko" : {
@@ -26532,8 +26856,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Settings"
+            "state" : "translated",
+            "value" : "設定"
           }
         },
         "ko" : {
@@ -26628,6 +26952,23 @@
         }
       }
     },
+    "Settings icon in notch" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings icon in notch"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ノッチに設定アイコンを表示"
+          }
+        }
+      }
+    },
     "Shelf" : {
       "localizations" : {
         "af" : {
@@ -26710,8 +27051,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Shelf"
+            "state" : "translated",
+            "value" : "シェルフ"
           }
         },
         "ko" : {
@@ -26888,8 +27229,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Shortcuts"
+            "state" : "translated",
+            "value" : "ショートカット"
           }
         },
         "ko" : {
@@ -26984,6 +27325,91 @@
         }
       }
     },
+    "Show battery indicator" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show battery indicator"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バッテリーインジケータを表示"
+          }
+        }
+      }
+    },
+    "Show battery percentage" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show battery percentage"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バッテリー残量を％で表示"
+          }
+        }
+      }
+    },
+    "Show calendar" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show calendar"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダーを表示"
+          }
+        }
+      }
+    },
+    "Show cool face animation while inactivity" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show cool face animation while inactivity"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "非アクティブ時に顔のアニメーションを表示"
+          }
+        }
+      }
+    },
+    "Show download progress" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show download progress"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダウンロードの進行状況を表示"
+          }
+        }
+      }
+    },
     "Show on a specific display" : {
       "localizations" : {
         "af" : {
@@ -27066,8 +27492,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Show on a specific display"
+            "state" : "translated",
+            "value" : "指定したディスプレイに表示"
           }
         },
         "ko" : {
@@ -27244,8 +27670,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Show on all displays"
+            "state" : "translated",
+            "value" : "すべてのディスプレイに表示"
           }
         },
         "ko" : {
@@ -27336,6 +27762,23 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Show on all displays"
+          }
+        }
+      }
+    },
+    "Show power status icons" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show power status icons"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "電源ステータスアイコンを表示"
           }
         }
       }
@@ -27600,8 +28043,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Slider color"
+            "state" : "translated",
+            "value" : "スライダーの色"
           }
         },
         "ko" : {
@@ -27778,8 +28221,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Sneak Peek shows the media title and artist under the notch for a few seconds."
+            "state" : "translated",
+            "value" : "スニークピークは、数秒間ノッチの下にメディアのタイトルとアーティスト名を表示します。"
           }
         },
         "ko" : {
@@ -27956,8 +28399,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Sneak Peek Style"
+            "state" : "translated",
+            "value" : "スニークピークのスタイル"
           }
         },
         "ko" : {
@@ -28276,8 +28719,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Speed"
+            "state" : "translated",
+            "value" : "速度"
           }
         },
         "ko" : {
@@ -28454,8 +28897,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Square"
+            "state" : "translated",
+            "value" : "四角"
           }
         },
         "ko" : {
@@ -28774,8 +29217,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Support Us"
+            "state" : "translated",
+            "value" : "サポートする"
           }
         },
         "ko" : {
@@ -28952,8 +29395,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "System features"
+            "state" : "translated",
+            "value" : "システム機能"
           }
         },
         "ko" : {
@@ -29308,8 +29751,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Toggle Notch Open:"
+            "state" : "translated",
+            "value" : "ノッチの開閉を切り替え："
           }
         },
         "ko" : {
@@ -29486,8 +29929,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Toggle Sneak Peek:"
+            "state" : "translated",
+            "value" : "スニークピークの切り替え："
           }
         },
         "ko" : {
@@ -29664,8 +30107,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Two-finger swipe up on notch to close, two-finger swipe down on notch to open when **Open notch on hover** option is disabled"
+            "state" : "translated",
+            "value" : "二本指でノッチを上にスワイプで閉じ、二本指で下にスワイプで開きます（「ホバーでノッチを開く」オプションが無効な場合）。"
           }
         },
         "ko" : {
@@ -29842,8 +30285,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Uninstall"
+            "state" : "translated",
+            "value" : "アンインストール"
           }
         },
         "ko" : {
@@ -30376,8 +30819,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Upgrade to Pro"
+            "state" : "translated",
+            "value" : "Pro にアップグレード"
           }
         },
         "ko" : {
@@ -30650,6 +31093,23 @@
         }
       }
     },
+    "Use simpler close animation" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use simpler close animation"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シンプルなクローズアニメーションを使用"
+          }
+        }
+      }
+    },
     "Version" : {
       "localizations" : {
         "en" : {
@@ -30696,8 +31156,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Version"
+            "state" : "translated",
+            "value" : "バージョン"
           }
         },
         "ko" : {
@@ -30838,8 +31298,8 @@
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Version info"
+            "state" : "translated",
+            "value" : "バージョン情報"
           }
         },
         "ko" : {
@@ -31108,6 +31568,22 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "View on GitHub: th-ch/youtube-music"
+          }
+        }
+      }
+    },
+    "We don't support downloads yet" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We don't support downloads yet"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダウンロードにはまだ対応していません"
           }
         }
       }

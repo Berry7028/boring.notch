@@ -18,6 +18,7 @@ enum SneakContentType {
     case mic
     case battery
     case download
+    case airpods
 }
 
 struct sneakPeek {
@@ -221,6 +222,12 @@ class BoringViewCoordinator: ObservableObject {
                 expandingViewTask?.cancel()
             }
         }
+    }
+
+    // Convenience function to show AirPods connected toast
+    func showAirPodsConnected(batteryLevel: Double) {
+        let clamped = max(0, min(1, batteryLevel))
+        toggleExpandingView(status: true, type: .airpods, value: CGFloat(clamped))
     }
 
     @objc func initialMicStatus(_ notification: Notification) {

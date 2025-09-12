@@ -101,6 +101,7 @@
 		B194240B2CD10017003E5DC2 /* LottieUI in Frameworks */ = {isa = PBXBuildFile; productRef = B194240A2CD10017003E5DC2 /* LottieUI */; };
 		B1A78C822C8BA08100BD51B0 /* FullscreenMediaDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A78C812C8BA08100BD51B0 /* FullscreenMediaDetection.swift */; };
 		B1A78C842C8C65ED00BD51B0 /* MediaRemote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1A78C832C8C65ED00BD51B0 /* MediaRemote.framework */; };
+		A1B2C4002E00010100000002 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B2C3FF2E00010100000001 /* CoreAudio.framework */; };
 		B1B112912C6A572100093D8F /* EditPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B112902C6A572100093D8F /* EditPanelView.swift */; };
 		B1B112932C6A577E00093D8F /* MouseTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B112922C6A577E00093D8F /* MouseTracker.swift */; };
 		B1C448962C9712C4001F0858 /* ActionBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C448952C9712C4001F0858 /* ActionBar.swift */; };
@@ -113,6 +114,11 @@
 		B1D6FD432C6603730015F173 /* SoftwareUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D6FD422C6603730015F173 /* SoftwareUpdater.swift */; };
 		B1FEB4992C7686630066EBBC /* PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FEB4982C7686630066EBBC /* PanGesture.swift */; };
 		F38DE6482D8243E7008B5C6D /* BatteryActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DE6472D8243E2008B5C6D /* BatteryActivityManager.swift */; };
+		A1B2C3D52E00000100000002 /* AirPodsConnectToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D42E00000100000001 /* AirPodsConnectToast.swift */; };
+		/* A1B2C3E52E00000100000002 airpods_pro.png in Resources (removed) */
+		A1B2C3F52E00000100000002 /* AudioDeviceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3F42E00000100000001 /* AudioDeviceMonitor.swift */; };
+		A1B2C4002E00010100000002 /* AirPodsBatteryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C4002E00010100000001 /* AirPodsBatteryReader.swift */; };
+		A1B2C4012E00010100000002 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D031ED2C689DB70096E6A1 /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -154,6 +160,8 @@
 		11CFC6602E097F6800748C80 /* PermissionsRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsRequestView.swift; sourceTree = "<group>"; };
 		11CFC6622E09917B00748C80 /* MusicControllerSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicControllerSelectionView.swift; sourceTree = "<group>"; };
 		11CFC6642E09C7B300748C80 /* OnboardingFinishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFinishView.swift; sourceTree = "<group>"; };
+		A1B2C3FF2E00010100000001 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = ../../../../../System/Library/Frameworks/CoreAudio.framework; sourceTree = "<group>"; };
+		A1B2C4002E00010100000001 /* AirPodsBatteryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPodsBatteryReader.swift; sourceTree = "<group>"; };
 		14288DD62C6E015000B9F80C /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		14288DE72C6E01C800B9F80C /* ProgressIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
 		14288DFD2C6E9A4700B9F80C /* BoringSystemTiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringSystemTiles.swift; sourceTree = "<group>"; };
@@ -240,6 +248,9 @@
 		B1ECFA032C6FE58A002ACD87 /* CoreDisplay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreDisplay.framework; path = ../../../../../System/Library/Frameworks/CoreDisplay.framework; sourceTree = "<group>"; };
 		B1FEB4982C7686630066EBBC /* PanGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGesture.swift; sourceTree = "<group>"; };
 		F38DE6472D8243E2008B5C6D /* BatteryActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryActivityManager.swift; sourceTree = "<group>"; };
+		A1B2C3D42E00000100000001 /* AirPodsConnectToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications/AirPodsConnectToast.swift; sourceTree = "<group>"; };
+		/* A1B2C3E42E00000100000001 airpods_pro.png (removed) */
+		A1B2C3F42E00000100000001 /* AudioDeviceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDeviceMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -262,6 +273,8 @@
 				B18654392C6F4990000B926A /* KeyboardShortcuts in Frameworks */,
 				B19016222CC15B3D00E3F12E /* Defaults in Frameworks */,
 				B1628B922CC260C0003D8DF3 /* SwiftUIIntrospect in Frameworks */,
+				A1B2C4002E00010100000002 /* CoreAudio.framework in Frameworks */,
+				A1B2C4012E00010100000002 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +357,7 @@
 				B10F84A22C6C9596009F3026 /* TestView.swift */,
 				14288DFD2C6E9A4700B9F80C /* BoringSystemTiles.swift */,
 				507266DA2C908E2E00A2D00D /* HoverButton.swift */,
+				A1B2C3D42E00000100000001 /* AirPodsConnectToast.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -357,6 +371,8 @@
 				149E0B962C737D00006418B1 /* WebcamManager.swift */,
 				147CB9562C8CCC980094C254 /* BoringExtensionManager.swift */,
 				14C08BB52C8DE42D000F8AA0 /* CalendarManager.swift */,
+				A1B2C3F42E00000100000001 /* AudioDeviceMonitor.swift */,
+				A1B2C4002E00010100000001 /* AirPodsBatteryReader.swift */,
 			);
 			path = managers;
 			sourceTree = "<group>";
@@ -421,6 +437,7 @@
 				14CEF41B2C5CAED400855D72 /* Preview Content */,
 				112FB72F2CCF12CC0015238C /* private */,
 				11CC44A12CEE614100C7244B /* BoringViewCoordinator.swift */,
+				/* airpods_pro.png removed */
 			);
 			path = boringNotch;
 			sourceTree = "<group>";
@@ -449,6 +466,7 @@
 				14D031EF2C689DC00096E6A1 /* ApplicationServices.framework */,
 				14D031ED2C689DB70096E6A1 /* IOKit.framework */,
 				112B0EBA2E30DD5000562D6C /* MediaRemoteAdapter.framework */,
+				A1B2C3FF2E00010100000001 /* CoreAudio.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -701,6 +719,7 @@
 				112B0EB92E30DD0F00562D6C /* mediaremote-adapter.pl in Resources */,
 				B17266E12C6532560031BA0D /* Localizable.xcstrings in Resources */,
 				14A7E5972C65FD31008C1BE9 /* boring.m4a in Resources */,
+				/* airpods_pro.png in Resources removed */
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,6 +797,8 @@
 				1471A8592C6281BD0058408D /* BoringNotchWindow.swift in Sources */,
 				147CB9572C8CCC980094C254 /* BoringExtensionManager.swift in Sources */,
 				14CEF4182C5CAED300855D72 /* ContentView.swift in Sources */,
+				A1B2C3D52E00000100000002 /* AirPodsConnectToast.swift in Sources */,
+				A1B2C3F52E00000100000002 /* AudioDeviceMonitor.swift in Sources */,
 				9A987A0D2C73CA66005CA465 /* NotchShelfView.swift in Sources */,
 				9A987A0A2C73CA66005CA465 /* TrayDrop.swift in Sources */,
 				11CFC65F2E097F2F00748C80 /* OnboardingView.swift in Sources */,
@@ -799,6 +820,8 @@
 				B1C448982C972CC4001F0858 /* ListItemPopover.swift in Sources */,
 				B19016242CC15B5000E3F12E /* Constants.swift in Sources */,
 				11CFC6632E09918400748C80 /* MusicControllerSelectionView.swift in Sources */,
+				A1B2C3F52E00000100000002 /* AudioDeviceMonitor.swift in Sources */,
+				A1B2C4002E00010100000002 /* AirPodsBatteryReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

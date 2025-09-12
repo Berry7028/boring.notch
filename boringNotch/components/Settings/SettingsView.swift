@@ -1242,7 +1242,7 @@ func comingSoonTag() -> some View {
         .clipShape(.capsule)
 }
 
-func customBadge(text: String) -> some View {
+func customBadge(text: LocalizedStringKey) -> some View {
     Text(text)
         .foregroundStyle(.secondary)
         .font(.footnote.bold())
@@ -1252,7 +1252,7 @@ func customBadge(text: String) -> some View {
         .clipShape(.capsule)
 }
 
-func warningBadge(_ text: String, _ description: String) -> some View {
+func warningBadge(_ text: LocalizedStringKey, _ description: LocalizedStringKey) -> some View {
     Section {
         HStack(spacing: 12) {
             Image(systemName: "exclamationmark.triangle.fill")
