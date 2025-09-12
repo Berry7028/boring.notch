@@ -1573,6 +1573,9 @@
       },
       "shouldTranslate" : false
     },
+    "%lld items • Click to copy" : {
+
+    },
     "%lld%%" : {
       "localizations" : {
         "af" : {
@@ -8266,6 +8269,15 @@
         }
       }
     },
+    "Clear History" : {
+
+    },
+    "Clipboard History" : {
+
+    },
+    "Clipboard menubar" : {
+
+    },
     "Close" : {
       "localizations" : {
         "af" : {
@@ -8780,6 +8792,9 @@
           }
         }
       }
+    },
+    "Copy something to get started" : {
+
     },
     "Corner radius scaling" : {
       "extractionState" : "stale",
@@ -21296,6 +21311,9 @@
         }
       }
     },
+    "No clipboard history" : {
+
+    },
     "No custom animation available" : {
       "localizations" : {
         "af" : {
@@ -22185,6 +22203,9 @@
           }
         }
       }
+    },
+    "No recent items" : {
+
     },
     "Non-notch display height" : {
       "localizations" : {
@@ -26275,6 +26296,9 @@
           }
         }
       }
+    },
+    "Select an item to copy it back to your clipboard." : {
+
     },
     "Select the music source you want to use. You can change this later in the app settings." : {
       "localizations" : {

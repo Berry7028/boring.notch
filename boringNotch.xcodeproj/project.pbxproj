@@ -115,11 +115,13 @@
 		B1FEB4992C7686630066EBBC /* PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FEB4982C7686630066EBBC /* PanGesture.swift */; };
 		F38DE6482D8243E7008B5C6D /* BatteryActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DE6472D8243E2008B5C6D /* BatteryActivityManager.swift */; };
 		A1B2C3D52E00000100000002 /* AirPodsConnectToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D42E00000100000001 /* AirPodsConnectToast.swift */; };
-		/* A1B2C3E52E00000100000002 airpods_pro.png in Resources (removed) */
 		A1B2C3F52E00000100000002 /* AudioDeviceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3F42E00000100000001 /* AudioDeviceMonitor.swift */; };
 		A1B2C4002E00010100000002 /* AirPodsBatteryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C4002E00010100000001 /* AirPodsBatteryReader.swift */; };
 		A1B2C4012E00010100000002 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D031ED2C689DB70096E6A1 /* IOKit.framework */; };
-A1F2E0042E50AAAA00000001 /* FluidGlassMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F2E0032E50AAAA00000001 /* FluidGlassMaterial.swift */; };
+		A1F2E0042E50AAAA00000001 /* FluidGlassMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F2E0032E50AAAA00000001 /* FluidGlassMaterial.swift */; };
+		A1C1B0AE2E77780100000010 /* ClipboardHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1B0AD2E77770100000010 /* ClipboardHistoryManager.swift */; };
+		A1C1B0AE2E77780200000010 /* ClipboardMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1B0AD2E77770200000010 /* ClipboardMenuView.swift */; };
+		A1C1B0AE2E77780300000010 /* ClipboardMenuBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1B0AD2E77770300000010 /* ClipboardMenuBarManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -250,9 +252,11 @@ A1F2E0042E50AAAA00000001 /* FluidGlassMaterial.swift in Sources */ = {isa = PBXB
 		B1FEB4982C7686630066EBBC /* PanGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGesture.swift; sourceTree = "<group>"; };
 		F38DE6472D8243E2008B5C6D /* BatteryActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryActivityManager.swift; sourceTree = "<group>"; };
 		A1B2C3D42E00000100000001 /* AirPodsConnectToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications/AirPodsConnectToast.swift; sourceTree = "<group>"; };
-		/* A1B2C3E42E00000100000001 airpods_pro.png (removed) */
 		A1B2C3F42E00000100000001 /* AudioDeviceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDeviceMonitor.swift; sourceTree = "<group>"; };
-A1F2E0032E50AAAA00000001 /* FluidGlassMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluidGlassMaterial.swift; sourceTree = "<group>"; };
+		A1F2E0032E50AAAA00000001 /* FluidGlassMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluidGlassMaterial.swift; sourceTree = "<group>"; };
+		A1C1B0AD2E77770100000010 /* ClipboardHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardHistoryManager.swift; sourceTree = "<group>"; };
+		A1C1B0AD2E77770200000010 /* ClipboardMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMenuView.swift; sourceTree = "<group>"; };
+		A1C1B0AD2E77770300000010 /* ClipboardMenuBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMenuBarManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -360,8 +364,17 @@ A1F2E0032E50AAAA00000001 /* FluidGlassMaterial.swift */ = {isa = PBXFileReferenc
 				14288DFD2C6E9A4700B9F80C /* BoringSystemTiles.swift */,
 				507266DA2C908E2E00A2D00D /* HoverButton.swift */,
 				A1B2C3D42E00000100000001 /* AirPodsConnectToast.swift */,
+				A1C1B0AF2E77780300000011 /* Clipboard */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		A1C1B0AF2E77780300000011 /* Clipboard */ = {
+			isa = PBXGroup;
+			children = (
+				A1C1B0AD2E77770200000010 /* ClipboardMenuView.swift */,
+			);
+			path = Clipboard;
 			sourceTree = "<group>";
 		};
 		147163B52C5D804B0068B555 /* managers */ = {
@@ -375,6 +388,8 @@ A1F2E0032E50AAAA00000001 /* FluidGlassMaterial.swift */ = {isa = PBXFileReferenc
 				14C08BB52C8DE42D000F8AA0 /* CalendarManager.swift */,
 				A1B2C3F42E00000100000001 /* AudioDeviceMonitor.swift */,
 				A1B2C4002E00010100000001 /* AirPodsBatteryReader.swift */,
+				A1C1B0AD2E77770100000010 /* ClipboardHistoryManager.swift */,
+				A1C1B0AD2E77770300000010 /* ClipboardMenuBarManager.swift */,
 			);
 			path = managers;
 			sourceTree = "<group>";
@@ -440,7 +455,6 @@ A1F2E0032E50AAAA00000001 /* FluidGlassMaterial.swift */ = {isa = PBXFileReferenc
 				14CEF41B2C5CAED400855D72 /* Preview Content */,
 				112FB72F2CCF12CC0015238C /* private */,
 				11CC44A12CEE614100C7244B /* BoringViewCoordinator.swift */,
-				/* airpods_pro.png removed */
 			);
 			path = boringNotch;
 			sourceTree = "<group>";
@@ -730,7 +744,6 @@ A1F2E0032E50AAAA00000001 /* FluidGlassMaterial.swift */ = {isa = PBXFileReferenc
 				112B0EB92E30DD0F00562D6C /* mediaremote-adapter.pl in Resources */,
 				B17266E12C6532560031BA0D /* Localizable.xcstrings in Resources */,
 				14A7E5972C65FD31008C1BE9 /* boring.m4a in Resources */,
-				/* airpods_pro.png in Resources removed */
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -832,8 +845,10 @@ A1F2E0032E50AAAA00000001 /* FluidGlassMaterial.swift */ = {isa = PBXFileReferenc
 				B1C448982C972CC4001F0858 /* ListItemPopover.swift in Sources */,
 				B19016242CC15B5000E3F12E /* Constants.swift in Sources */,
 				11CFC6632E09918400748C80 /* MusicControllerSelectionView.swift in Sources */,
-				A1B2C3F52E00000100000002 /* AudioDeviceMonitor.swift in Sources */,
 				A1B2C4002E00010100000002 /* AirPodsBatteryReader.swift in Sources */,
+				A1C1B0AE2E77780100000010 /* ClipboardHistoryManager.swift in Sources */,
+				A1C1B0AE2E77780200000010 /* ClipboardMenuView.swift in Sources */,
+				A1C1B0AE2E77780300000010 /* ClipboardMenuBarManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

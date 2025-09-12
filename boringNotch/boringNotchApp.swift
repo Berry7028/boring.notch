@@ -81,6 +81,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ notification: Notification) {
         NotificationCenter.default.removeObserver(self)
         MusicManager.shared.destroy()
+        ClipboardMenuBarManager.shared.removeMenuBarItem()
         cleanupWindows()
     }
 
@@ -278,6 +279,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         previousScreens = NSScreen.screens
+        
+        // Initialize clipboard menu bar item
+        if Defaults[.enableClipboardMenuBar] {
+            ClipboardMenuBarManager.shared.setupMenuBarItem()
+        }
     }
 
     func playWelcomeSound() {

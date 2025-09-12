@@ -149,6 +149,17 @@ struct GeneralSettings: View {
         Form {
             Section {
                 Defaults.Toggle("Menubar icon", key: .menubarIcon)
+                Toggle("Clipboard menubar", isOn: .init(
+                    get: { Defaults[.enableClipboardMenuBar] },
+                    set: { newValue in
+                        Defaults[.enableClipboardMenuBar] = newValue
+                        if newValue {
+                            ClipboardMenuBarManager.shared.setupMenuBarItem()
+                        } else {
+                            ClipboardMenuBarManager.shared.removeMenuBarItem()
+                        }
+                    }
+                ))
                 LaunchAtLogin.Toggle("Launch at login")
                 Defaults.Toggle(key: .showOnAllDisplays) {
                     Text("Show on all displays")
