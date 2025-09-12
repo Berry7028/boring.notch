@@ -53,7 +53,9 @@ struct ContentView: View {
                         : cornerRadiusInsets.closed.bottom
                 )
                 .padding([.horizontal, .bottom], vm.notchState == .open ? 12 : 0)
-                .background(.black)
+                .background(
+                    VisualEffectView(material: .hudWindow, blendingMode: .behindWindow)
+                )
                 .mask {
                     ((vm.notchState == .open) && Defaults[.cornerRadiusScaling])
                         ? NotchShape(
@@ -212,8 +214,7 @@ struct ContentView: View {
                                     .foregroundStyle(.white)
                             }
 
-                            Rectangle()
-                                .fill(.black)
+                            VisualEffectView(material: .hudWindow, blendingMode: .behindWindow)
                                 .frame(width: vm.closedNotchSize.width + 10)
 
                             HStack {
@@ -302,8 +303,7 @@ struct ContentView: View {
                     .frame(
                         width: max(0, vm.effectiveClosedNotchHeight - 12),
                         height: max(0, vm.effectiveClosedNotchHeight - 12))
-                Rectangle()
-                    .fill(.black)
+                VisualEffectView(material: .hudWindow, blendingMode: .behindWindow)
                     .frame(width: vm.closedNotchSize.width - 20)
                 MinimalFaceFeatures()
             }
@@ -336,8 +336,7 @@ struct ContentView: View {
                     0, vm.effectiveClosedNotchHeight - (isHovering ? 0 : 12) + gestureProgress / 2),
                 height: max(0, vm.effectiveClosedNotchHeight - (isHovering ? 0 : 12)))
 
-            Rectangle()
-                .fill(.black)
+            VisualEffectView(material: .hudWindow, blendingMode: .behindWindow)
                 .overlay(
                     HStack(alignment: .top) {
                         if coordinator.expandingView.show

@@ -78,11 +78,15 @@ struct AlbumArtView: View {
     }
 
     private var albumArtDarkOverlay: some View {
-        Rectangle()
+        VisualEffectView(material: .hudWindow, blendingMode: .withinWindow)
             .aspectRatio(1, contentMode: .fit)
-            .foregroundColor(Color.black)
-            .opacity(musicManager.isPlaying ? 0 : 0.8)
-            .blur(radius: 50)
+            .opacity(musicManager.isPlaying ? 0 : 0.9)
+            .clipShape(
+                RoundedRectangle(
+                    cornerRadius: Defaults[.cornerRadiusScaling]
+                        ? MusicPlayerImageSizes.cornerRadiusInset.opened
+                        : MusicPlayerImageSizes.cornerRadiusInset.closed)
+            )
     }
                 
 

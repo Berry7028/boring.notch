@@ -95,7 +95,7 @@ struct WheelPicker: View {
             }
             .padding(.vertical, 4)
             .padding(.horizontal, 4)
-            .background(isSelected ? Color.accentColor.opacity(0.25) : Color.clear)
+            .background((isSelected && !isToday) ? Color.accentColor.opacity(0.25) : Color.clear)
             .cornerRadius(8)
         }
         .buttonStyle(PlainButtonStyle())
@@ -198,18 +198,27 @@ struct CalendarView: View {
                 }
 
                 ZStack(alignment: .top) {
+                    // Use a mask fade instead of dark overlays to avoid black edges
                     WheelPicker(selectedDate: $selectedDate, config: Config())
-                    HStack(alignment: .top) {
-                        LinearGradient(
-                            colors: [Color.black, .clear], startPoint: .leading, endPoint: .trailing
+                        .mask(
+                            HStack(spacing: 0) {
+                                LinearGradient(
+                                    colors: [.clear, .white],
+                                    startPoint: .leading,
+                                    endPoint: .trailing
+                                )
+                                .frame(width: 20)
+
+                                Rectangle().fill(.white)
+
+                                LinearGradient(
+                                    colors: [.white, .clear],
+                                    startPoint: .leading,
+                                    endPoint: .trailing
+                                )
+                                .frame(width: 20)
+                            }
                         )
-                        .frame(width: 20)
-                        Spacer()
-                        LinearGradient(
-                            colors: [.clear, Color.black], startPoint: .leading, endPoint: .trailing
-                        )
-                        .frame(width: 20)
-                    }
                 }
             }
 

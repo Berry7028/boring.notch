@@ -23,7 +23,9 @@ struct FluidSlider: View {
                 .frame(width: rectSize2.width, height: circleSize)
         }
         .padding()
-        .background(.black)
+        .background(
+            VisualEffectView(material: .hudWindow, blendingMode: .behindWindow)
+        )
     }
     
     private var slider: some View {
@@ -63,9 +65,9 @@ struct FluidSlider: View {
                         self.previousOffset = self.offset
                     })
             )
-            Circle()
-                .fill(Color.black)
-                .frame(width: circleSize * 0.6)
+            VisualEffectView(material: .hudWindow, blendingMode: .behindWindow)
+                .frame(width: circleSize * 0.6, height: circleSize * 0.6)
+                .clipShape(Circle())
                 .overlay {
                     Image(systemName: "speaker.wave.2.fill")
                         .imageScale(.small)

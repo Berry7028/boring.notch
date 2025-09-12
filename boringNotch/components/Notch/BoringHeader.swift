@@ -29,13 +29,16 @@ struct BoringHeader: View {
             .zIndex(2)
 
             if vm.notchState == .open {
-                Rectangle()
-                    .fill(NSScreen.screens
-                        .first(where: { $0.localizedName == coordinator.selectedScreen })?.safeAreaInsets.top ?? 0 > 0 ? .black : .clear)
-                    .frame(width: vm.closedNotchSize.width)
-                    .mask {
-                        NotchShape()
-                    }
+                if (NSScreen.screens
+                    .first(where: { $0.localizedName == coordinator.selectedScreen })?.safeAreaInsets.top ?? 0) > 0 {
+                    VisualEffectView(material: .hudWindow, blendingMode: .behindWindow)
+                        .frame(width: vm.closedNotchSize.width)
+                        .mask {
+                            NotchShape()
+                        }
+                } else {
+                    EmptyView()
+                }
             }
 
             HStack(spacing: 4) {
@@ -44,9 +47,9 @@ struct BoringHeader: View {
                         Button(action: {
                             vm.toggleCameraPreview()
                         }) {
-                            Capsule()
-                                .fill(.black)
+                            VisualEffectView(material: .hudWindow, blendingMode: .behindWindow)
                                 .frame(width: 30, height: 30)
+                                .clipShape(Capsule())
                                 .overlay {
                                     Image(systemName: "web.camera")
                                         .foregroundColor(.white)
@@ -60,9 +63,9 @@ struct BoringHeader: View {
                         Button(action: {
                             SettingsWindowController.shared.showWindow()
                         }) {
-                            Capsule()
-                                .fill(.black)
+                            VisualEffectView(material: .hudWindow, blendingMode: .behindWindow)
                                 .frame(width: 30, height: 30)
+                                .clipShape(Capsule())
                                 .overlay {
                                     Image(systemName: "gear")
                                         .foregroundColor(.white)
