@@ -31,7 +31,8 @@ struct BoringHeader: View {
             if vm.notchState == .open {
                 if (NSScreen.screens
                     .first(where: { $0.localizedName == coordinator.selectedScreen })?.safeAreaInsets.top ?? 0) > 0 {
-                    VisualEffectView(material: .hudWindow, blendingMode: .behindWindow)
+                    FluidGlassMaterial(intensity: 0.65, fluidity: 0.8, isActive: true)
+                        .environmentObject(vm)
                         .frame(width: vm.closedNotchSize.width)
                         .mask {
                             NotchShape()
@@ -47,7 +48,8 @@ struct BoringHeader: View {
                         Button(action: {
                             vm.toggleCameraPreview()
                         }) {
-                            VisualEffectView(material: .hudWindow, blendingMode: .behindWindow)
+                            FluidGlassMaterial(intensity: 0.6, fluidity: 0.8, isActive: true)
+                                .environmentObject(vm)
                                 .frame(width: 30, height: 30)
                                 .clipShape(Capsule())
                                 .overlay {
@@ -63,7 +65,8 @@ struct BoringHeader: View {
                         Button(action: {
                             SettingsWindowController.shared.showWindow()
                         }) {
-                            VisualEffectView(material: .hudWindow, blendingMode: .behindWindow)
+                            FluidGlassMaterial(intensity: 0.6, fluidity: 0.8, isActive: true)
+                                .environmentObject(vm)
                                 .frame(width: 30, height: 30)
                                 .clipShape(Capsule())
                                 .overlay {

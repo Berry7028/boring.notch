@@ -54,7 +54,14 @@ struct ContentView: View {
                 )
                 .padding([.horizontal, .bottom], vm.notchState == .open ? 12 : 0)
                 .background(
-                    VisualEffectView(material: .hudWindow, blendingMode: .behindWindow)
+                    // Fluid, refractive glass material
+                    FluidGlassMaterial(
+                        intensity: 0.7,
+                        fluidity: 0.85,
+                        isActive: true,
+                        amplitude: abs(gestureProgress)
+                    )
+                    .environmentObject(vm)
                 )
                 .mask {
                     ((vm.notchState == .open) && Defaults[.cornerRadiusScaling])

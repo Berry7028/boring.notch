@@ -119,6 +119,7 @@
 		A1B2C3F52E00000100000002 /* AudioDeviceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3F42E00000100000001 /* AudioDeviceMonitor.swift */; };
 		A1B2C4002E00010100000002 /* AirPodsBatteryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C4002E00010100000001 /* AirPodsBatteryReader.swift */; };
 		A1B2C4012E00010100000002 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D031ED2C689DB70096E6A1 /* IOKit.framework */; };
+A1F2E0042E50AAAA00000001 /* FluidGlassMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F2E0032E50AAAA00000001 /* FluidGlassMaterial.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -251,6 +252,7 @@
 		A1B2C3D42E00000100000001 /* AirPodsConnectToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications/AirPodsConnectToast.swift; sourceTree = "<group>"; };
 		/* A1B2C3E42E00000100000001 airpods_pro.png (removed) */
 		A1B2C3F42E00000100000001 /* AudioDeviceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDeviceMonitor.swift; sourceTree = "<group>"; };
+A1F2E0032E50AAAA00000001 /* FluidGlassMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluidGlassMaterial.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -414,6 +416,7 @@
 		14CEF4142C5CAED300855D72 /* boringNotch */ = {
 			isa = PBXGroup;
 			children = (
+				A1F2E0002E50AAAA00000001 /* effects */,
 				116398942DF5D6B40052E6AF /* Providers */,
 				14288DE22C6E016F00B9F80C /* observers */,
 				14288DD92C6E015000B9F80C /* helpers */,
@@ -627,6 +630,14 @@
 			path = Tips;
 			sourceTree = "<group>";
 		};
+        A1F2E0002E50AAAA00000001 /* effects */ = {
+            isa = PBXGroup;
+            children = (
+                A1F2E0032E50AAAA00000001 /* FluidGlassMaterial.swift */,
+            );
+            path = effects;
+            sourceTree = "<group>";
+        };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -730,6 +741,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F2E0042E50AAAA00000001 /* FluidGlassMaterial.swift in Sources */,
 				14C08BB92C8DE4B1000F8AA0 /* BoringCalendar.swift in Sources */,
 				147163982C5D35B70068B555 /* MusicVisualizer.swift in Sources */,
 				11CC44A22CEE614100C7244B /* BoringViewCoordinator.swift in Sources */,
