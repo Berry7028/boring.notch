@@ -16,9 +16,11 @@ class ClipboardMenuBarManager: NSObject, NSMenuDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         
         if let button = statusItem?.button {
-            // Use clipboard system icon
+            // Use clipboard system icon + label text
             button.image = NSImage(systemSymbolName: "doc.on.clipboard", accessibilityDescription: "Clipboard History")
             button.image?.size = NSSize(width: 16, height: 16)
+            button.title = " クリップボード"
+            button.imagePosition = .imageLeading
             button.target = self
             button.action = #selector(statusItemClicked)
             button.sendAction(on: [.leftMouseUp, .rightMouseUp])
@@ -203,24 +205,46 @@ struct ClipboardItemRow: View {
         let truncatedLines = Array(lines.prefix(maxLines))
         return truncatedLines.joined(separator: "\n") + "..."
     }
-    
+
     var body: some View {
         Button(action: onCopy) {
-            HStack(alignment: .top, spacing: 12) {
+            HStack(alignment: .center, spacing: 12) {
+                // Preview
+                if item.kind == .image, let img = item.image {
+                    Image(nsImage: img)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 80, height: 60)
+                        .cornerRadius(6)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 6)
+                                .stroke(Color.secondary.opacity(0.2), lineWidth: 1)
+                        )
+                } else {
+                    Image(systemName: "doc.plaintext")
+                        .foregroundColor(.secondary)
+                        .frame(width: 20)
+                }
+
                 // Content
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(truncated(item.string))
-                        .font(.system(size: 13))
-                        .foregroundColor(.primary)
-                        .multilineTextAlignment(.leading)
-                        .lineLimit(3)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
+                    if item.kind == .text, let text = item.string {
+                        Text(truncated(text))
+                            .font(.system(size: 13))
+                            .foregroundColor(.primary)
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(3)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    } else {
+                        Text("Image")
+                            .font(.system(size: 13, weight: .medium))
+                            .foregroundColor(.primary)
+                    }
                     Text(timeAgo(from: item.date))
                         .font(.system(size: 11))
                         .foregroundColor(.secondary)
                 }
-                
+
                 // Copy indicator
                 if isHovered {
                     Image(systemName: "doc.on.doc")

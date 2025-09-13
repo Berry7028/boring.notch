@@ -913,8 +913,13 @@ struct Appearance: View {
     @Default(.useMusicVisualizer) var useMusicVisualizer
     @Default(.customVisualizers) var customVisualizers
     @Default(.selectedVisualizer) var selectedVisualizer
-    let icons: [String] = ["logo2"]
-    @State private var selectedIcon: String = "logo2"
+    struct AppIconOption: Hashable { let name: String; let title: String }
+    let icons: [AppIconOption] = [
+        .init(name: "logo2", title: "Default"),
+        .init(name: "logo",  title: "Classic")
+    ]
+    @Default(.selectedAppIconName) private var selectedAppIconName
+    @State private var selectedIcon: String = Defaults[.selectedAppIconName]
     @State private var selectedListVisualizer: CustomVisualizer? = nil
 
     @State private var isPresented: Bool = false
@@ -1140,46 +1145,48 @@ struct Appearance: View {
 
             Section {
                 HStack {
-                    ForEach(icons, id: \.self) { icon in
+                    ForEach(icons, id: \.self) { option in
                         Spacer()
                         VStack {
-                            Image(icon)
+                            Image(option.name)
                                 .resizable()
                                 .frame(width: 80, height: 80)
                                 .background(
                                     RoundedRectangle(cornerRadius: 20, style: .circular)
                                         .strokeBorder(
-                                            icon == selectedIcon ? Color.accentColor : .clear,
+                                            option.name == selectedIcon ? Color.accentColor : .clear,
                                             lineWidth: 2.5
                                         )
                                 )
 
-                            Text("Default")
+                            Text(option.title)
                                 .fontWeight(.medium)
                                 .font(.caption)
-                                .foregroundStyle(icon == selectedIcon ? .white : .secondary)
+                                .foregroundStyle(option.name == selectedIcon ? .white : .secondary)
                                 .padding(.horizontal, 10)
                                 .padding(.vertical, 3)
                                 .background(
                                     Capsule()
-                                        .fill(icon == selectedIcon ? Color.accentColor : .clear)
+                                        .fill(option.name == selectedIcon ? Color.accentColor : .clear)
                                 )
                         }
                         .onTapGesture {
                             withAnimation {
-                                selectedIcon = icon
+                                selectedIcon = option.name
+                                selectedAppIconName = option.name
                             }
-                            NSApp.applicationIconImage = NSImage(named: icon)
+                            if let nsImage = NSImage(named: NSImage.Name(option.name)) {
+                                NSApp.applicationIconImage = nsImage
+                            }
                         }
                         Spacer()
                     }
                 }
-                .disabled(true)
             } header: {
-                HStack {
-                    Text("App icon")
-                    customBadge(text: "Coming soon")
-                }
+                Text("App icon")
+            }
+            .onAppear {
+                selectedIcon = selectedAppIconName
             }
         }
         .navigationTitle("Appearance")

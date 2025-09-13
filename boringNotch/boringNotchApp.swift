@@ -155,6 +155,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Start monitoring audio output device changes to detect AirPods connection
         AudioDeviceMonitor.shared.start()
 
+        // Apply user-selected app icon to Dock
+        if let img = NSImage(named: NSImage.Name(Defaults[.selectedAppIconName])) {
+            NSApp.applicationIconImage = img
+        }
+
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(screenConfigurationDidChange),

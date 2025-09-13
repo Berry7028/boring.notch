@@ -43,12 +43,28 @@ struct ClipboardMenuView: View {
                     }) {
                         ZStack {
                             VisualEffectView(material: .hudWindow, blendingMode: .behindWindow)
-                            Text(truncated(entry.string))
-                                .font(.system(size: 14, weight: .medium))
-                                .foregroundColor(.primary)
-                                .lineLimit(2)
-                                .multilineTextAlignment(.center)
-                                .padding(.horizontal, 12)
+                            HStack(spacing: 10) {
+                                if entry.kind == .image, let img = entry.image {
+                                    Image(nsImage: img)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 42, height: 32)
+                                        .cornerRadius(6)
+                                }
+                                if entry.kind == .text, let s = entry.string {
+                                    Text(truncated(s))
+                                        .font(.system(size: 14, weight: .medium))
+                                        .foregroundColor(.primary)
+                                        .lineLimit(2)
+                                        .multilineTextAlignment(.leading)
+                                } else if entry.kind == .image {
+                                    Text("Image")
+                                        .font(.system(size: 14, weight: .medium))
+                                        .foregroundColor(.primary)
+                                }
+                                Spacer(minLength: 0)
+                            }
+                            .padding(.horizontal, 12)
                         }
                         .frame(height: 44)
                         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))

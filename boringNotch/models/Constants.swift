@@ -105,6 +105,8 @@ extension Defaults.Keys {
     static let useMusicVisualizer = Key<Bool>("useMusicVisualizer", default: true)
     static let customVisualizers = Key<[CustomVisualizer]>("customVisualizers", default: [])
     static let selectedVisualizer = Key<CustomVisualizer?>("selectedVisualizer", default: nil)
+    // App Icon
+    static let selectedAppIconName = Key<String>("selectedAppIconName", default: "logo2")
     
         // MARK: Gestures
     static let enableGestures = Key<Bool>("enableGestures", default: true)
