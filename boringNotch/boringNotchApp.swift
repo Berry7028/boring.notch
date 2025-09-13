@@ -79,6 +79,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc func onScreenLocked(_: Notification) {
         print("Screen locked")
+        // Show lock banner in-app
+        BoringViewCoordinator.shared.showLockStatus(isLocked: true)
         cleanupWindows()
     }
 
@@ -87,6 +89,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
             self?.cleanupWindows()
             self?.adjustWindowPosition(changeAlpha: true)
+            // Animate unlock indicator and land on Home view
+            BoringViewCoordinator.shared.showLockStatus(isLocked: false)
         }
     }
 

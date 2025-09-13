@@ -115,8 +115,10 @@
 		B1FEB4992C7686630066EBBC /* PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FEB4982C7686630066EBBC /* PanGesture.swift */; };
 		F38DE6482D8243E7008B5C6D /* BatteryActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DE6472D8243E2008B5C6D /* BatteryActivityManager.swift */; };
 		A1B2C3D52E00000100000002 /* AirPodsConnectToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D42E00000100000001 /* AirPodsConnectToast.swift */; };
+		A1B2C3D62E00000100000003 /* LockStatusBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D62E00000100000001 /* LockStatusBanner.swift */; };
 		A1B2C3F52E00000100000002 /* AudioDeviceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3F42E00000100000001 /* AudioDeviceMonitor.swift */; };
 		A1B2C4002E00010100000002 /* AirPodsBatteryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C4002E00010100000001 /* AirPodsBatteryReader.swift */; };
+
 		A1B2C4012E00010100000002 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D031ED2C689DB70096E6A1 /* IOKit.framework */; };
 		A1F2E0042E50AAAA00000001 /* FluidGlassMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F2E0032E50AAAA00000001 /* FluidGlassMaterial.swift */; };
 		A1C1B0AE2E77780100000010 /* ClipboardHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1B0AD2E77770100000010 /* ClipboardHistoryManager.swift */; };
@@ -165,6 +167,7 @@
 		11CFC6642E09C7B300748C80 /* OnboardingFinishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFinishView.swift; sourceTree = "<group>"; };
 		A1B2C3FF2E00010100000001 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = ../../../../../System/Library/Frameworks/CoreAudio.framework; sourceTree = "<group>"; };
 		A1B2C4002E00010100000001 /* AirPodsBatteryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPodsBatteryReader.swift; sourceTree = "<group>"; };
+
 		14288DD62C6E015000B9F80C /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		14288DE72C6E01C800B9F80C /* ProgressIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
 		14288DFD2C6E9A4700B9F80C /* BoringSystemTiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringSystemTiles.swift; sourceTree = "<group>"; };
@@ -252,6 +255,7 @@
 		B1FEB4982C7686630066EBBC /* PanGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGesture.swift; sourceTree = "<group>"; };
 		F38DE6472D8243E2008B5C6D /* BatteryActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryActivityManager.swift; sourceTree = "<group>"; };
 		A1B2C3D42E00000100000001 /* AirPodsConnectToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications/AirPodsConnectToast.swift; sourceTree = "<group>"; };
+		A1B2C3D62E00000100000001 /* LockStatusBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications/LockStatusBanner.swift; sourceTree = "<group>"; };
 		A1B2C3F42E00000100000001 /* AudioDeviceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDeviceMonitor.swift; sourceTree = "<group>"; };
 		A1F2E0032E50AAAA00000001 /* FluidGlassMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluidGlassMaterial.swift; sourceTree = "<group>"; };
 		A1C1B0AD2E77770100000010 /* ClipboardHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardHistoryManager.swift; sourceTree = "<group>"; };
@@ -364,6 +368,7 @@
 				14288DFD2C6E9A4700B9F80C /* BoringSystemTiles.swift */,
 				507266DA2C908E2E00A2D00D /* HoverButton.swift */,
 				A1B2C3D42E00000100000001 /* AirPodsConnectToast.swift */,
+				A1B2C3D62E00000100000001 /* LockStatusBanner.swift */,
 				A1C1B0AF2E77780300000011 /* Clipboard */,
 			);
 			path = components;
@@ -388,6 +393,7 @@
 				14C08BB52C8DE42D000F8AA0 /* CalendarManager.swift */,
 				A1B2C3F42E00000100000001 /* AudioDeviceMonitor.swift */,
 				A1B2C4002E00010100000001 /* AirPodsBatteryReader.swift */,
+
 				A1C1B0AD2E77770100000010 /* ClipboardHistoryManager.swift */,
 				A1C1B0AD2E77770300000010 /* ClipboardMenuBarManager.swift */,
 			);
@@ -754,6 +760,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				A1F2E0042E50AAAA00000001 /* FluidGlassMaterial.swift in Sources */,
 				14C08BB92C8DE4B1000F8AA0 /* BoringCalendar.swift in Sources */,
 				147163982C5D35B70068B555 /* MusicVisualizer.swift in Sources */,
@@ -822,6 +829,7 @@
 				1471A8592C6281BD0058408D /* BoringNotchWindow.swift in Sources */,
 				147CB9572C8CCC980094C254 /* BoringExtensionManager.swift in Sources */,
 				14CEF4182C5CAED300855D72 /* ContentView.swift in Sources */,
+				A1B2C3D62E00000100000003 /* LockStatusBanner.swift in Sources */,
 				A1B2C3D52E00000100000002 /* AirPodsConnectToast.swift in Sources */,
 				A1B2C3F52E00000100000002 /* AudioDeviceMonitor.swift in Sources */,
 				9A987A0D2C73CA66005CA465 /* NotchShelfView.swift in Sources */,

@@ -98,22 +98,72 @@ final class AirPodsBatteryReader {
     }
 
     private func batteryLevel(from dict: [String: Any]) -> Double? {
-        // Prefer ears average, then single, then case
-        let left = Self.intValue(dict["BatteryPercentLeft"]) ?? Self.intValue(dict["Battery Percent Left"]) // sometimes spaced
-        let right = Self.intValue(dict["BatteryPercentRight"]) ?? Self.intValue(dict["Battery Percent Right"]) // sometimes spaced
-        let single = Self.intValue(dict["BatteryPercent"]) ?? Self.intValue(dict["BatteryPercentSingle"]) ?? Self.intValue(dict["Battery Percent"]) ?? Self.intValue(dict["Battery Percent Single"]) ?? Self.intValue(dict["BatteryPercentCase"]) ?? Self.intValue(dict["Battery Percent Case"]) // last resort
+        // Known keys seen in IORegistry / Bluetooth plists for Apple audio devices:
+        // - BatteryPercentCombined (overall, often present on AirPods Pro)
+        // - BatteryPercentLeft / BatteryPercentRight (per-earbud)
+        // - BatteryPercentSingle (single-battery headsets)
+        // - BatteryPercent (generic single value)
+        // - HeadsetBattery (string like "71%" on some stacks)
+        // - BatteryPercentCase (case battery — use only as a last resort)
 
-        if let l = left, let r = right, (l > 0 || r > 0) {
+        // 1) Combined (best single indicator when present)
+        if let combined = Self.percentInt(dict,
+                                          keys: ["BatteryPercentCombined", "Battery Percent Combined"]) {
+            if let normalized = Self.normalize0to100(combined) {
+                return Double(normalized) / 100.0
+            }
+        }
+
+        // 2) Left/Right — average if both available; otherwise whichever ear we have
+        let left = Self.percentInt(dict, keys: ["BatteryPercentLeft", "Battery Percent Left"]).flatMap(Self.normalize0to100)
+        let right = Self.percentInt(dict, keys: ["BatteryPercentRight", "Battery Percent Right"]).flatMap(Self.normalize0to100)
+        if let l = left, let r = right, (l >= 0 || r >= 0) {
             return Double(l + r) / 2.0 / 100.0
         }
-        if let s = single { return Double(s) / 100.0 }
+        if let l = left { return Double(l) / 100.0 }
+        if let r = right { return Double(r) / 100.0 }
+
+        // 3) Single battery value (various keys)
+        if let single = Self.percentInt(
+            dict,
+            keys: ["BatteryPercent", "Battery Percent", "BatteryPercentSingle", "Battery Percent Single", "HeadsetBattery"]
+        ), let normalized = Self.normalize0to100(single) {
+            return Double(normalized) / 100.0
+        }
+
+        // 4) Case battery (only if nothing else is available)
+        if let casePct = Self.percentInt(dict, keys: ["BatteryPercentCase", "Battery Percent Case"]),
+           let normalized = Self.normalize0to100(casePct)
+        {
+            return Double(normalized) / 100.0
+        }
+
         return nil
     }
 
+    /// Extract an Int percent from any of the provided keys.
+    private static func percentInt(_ dict: [String: Any], keys: [String]) -> Int? {
+        for key in keys {
+            if let raw = dict[key] { return intValue(raw) }
+        }
+        return nil
+    }
+
+    /// Convert mixed numeric/string (e.g. 71 or "71%") into Int if possible.
     private static func intValue(_ any: Any?) -> Int? {
         if let n = any as? NSNumber { return n.intValue }
-        if let s = any as? String { return Int(s) }
+        if let s = any as? String {
+            // Strip non-digits like "%" or spaces
+            let digits = s.filter { $0.isNumber }
+            return Int(digits)
+        }
         return nil
+    }
+
+    /// Clamp to 0...100 and discard obviously invalid values (<0 or >1000 etc.)
+    private static func normalize0to100(_ value: Int) -> Int? {
+        guard value >= 0 && value <= 1000 else { return nil }
+        return min(max(value, 0), 100)
     }
 
     private func readFromIoregShell() -> Double? {
@@ -155,14 +205,24 @@ final class AirPodsBatteryReader {
             return nil
         }
 
+        let combined = value(for: "BatteryPercentCombined") ?? value(for: "Battery Percent Combined")
+        if let c = combined, let norm = Self.normalize0to100(c) { return Double(norm) / 100.0 }
+
         let left = value(for: "BatteryPercentLeft") ?? value(for: "Battery Percent Left")
         let right = value(for: "BatteryPercentRight") ?? value(for: "Battery Percent Right")
-        let single = value(for: "BatteryPercent") ?? value(for: "Battery Percent") ?? value(for: "BatteryPercentSingle") ?? value(for: "Battery Percent Single") ?? value(for: "BatteryPercentCase")
-
-        if let l = left, let r = right, (l > 0 || r > 0) {
+        if let l = left.flatMap(Self.normalize0to100), let r = right.flatMap(Self.normalize0to100), (l >= 0 || r >= 0) {
             return Double(l + r) / 2.0 / 100.0
         }
-        if let s = single { return Double(s) / 100.0 }
+        if let l = left.flatMap(Self.normalize0to100) { return Double(l) / 100.0 }
+        if let r = right.flatMap(Self.normalize0to100) { return Double(r) / 100.0 }
+
+        let single = value(for: "BatteryPercent")
+            ?? value(for: "Battery Percent")
+            ?? value(for: "BatteryPercentSingle")
+            ?? value(for: "Battery Percent Single")
+            ?? value(for: "HeadsetBattery")
+            ?? value(for: "BatteryPercentCase") // last resort
+        if let s = single.flatMap(Self.normalize0to100) { return Double(s) / 100.0 }
         return nil
     }
 }

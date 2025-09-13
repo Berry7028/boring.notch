@@ -241,6 +241,14 @@ struct ContentView: View {
                         AirPodsConnectToast(batteryLevel: Double(coordinator.expandingView.value))
                             .environmentObject(vm)
                             .frame(height: vm.effectiveClosedNotchHeight + (isHovering ? 8 : 0), alignment: .center)
+                    } else if coordinator.expandingView.type == .lock && coordinator.expandingView.show && vm.notchState == .closed {
+                        LockStatusBanner(
+                            isLocked: coordinator.expandingView.value >= 0.5
+                        )
+                        .transition(.move(edge: .top).combined(with: .opacity))
+                        .animation(.spring(response: 0.5, dampingFraction: 0.9), value: coordinator.expandingView.show)
+                        .environmentObject(vm)
+                        .frame(height: vm.effectiveClosedNotchHeight + (isHovering ? 8 : 0), alignment: .center)
                       } else if coordinator.sneakPeek.show && Defaults[.inlineHUD] && (coordinator.sneakPeek.type != .music) && (coordinator.sneakPeek.type != .battery) {
                           InlineHUD(type: $coordinator.sneakPeek.type, value: $coordinator.sneakPeek.value, icon: $coordinator.sneakPeek.icon, hoverAnimation: $isHovering, gestureProgress: $gestureProgress)
                               .transition(.opacity)

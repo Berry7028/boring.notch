@@ -19,6 +19,7 @@ enum SneakContentType {
     case battery
     case download
     case airpods
+    case lock
 }
 
 struct sneakPeek {
@@ -228,6 +229,16 @@ class BoringViewCoordinator: ObservableObject {
     func showAirPodsConnected(batteryLevel: Double) {
         let clamped = max(0, min(1, batteryLevel))
         toggleExpandingView(status: true, type: .airpods, value: CGFloat(clamped))
+    }
+
+    // Convenience function to show lock or unlock status overlay
+    // `isLocked == true` shows a lock icon; `false` shows an unlock animation/icon.
+    func showLockStatus(isLocked: Bool) {
+        toggleExpandingView(status: true, type: .lock, value: isLocked ? 1 : 0)
+        if !isLocked {
+            // On unlock, land the app on Home view
+            currentView = .home
+        }
     }
 
     @objc func initialMicStatus(_ notification: Notification) {
