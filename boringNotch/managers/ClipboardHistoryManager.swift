@@ -14,6 +14,8 @@ struct ClipboardEntry: Identifiable, Equatable {
     let image: NSImage?
     let date: Date
     let dataHash: String
+    let appName: String?
+    let bundleIdentifier: String?
 
     static func == (lhs: ClipboardEntry, rhs: ClipboardEntry) -> Bool {
         lhs.kind == rhs.kind && lhs.dataHash == rhs.dataHash
@@ -81,11 +83,14 @@ class ClipboardHistoryManager: ObservableObject {
     }
 
     private func readTextEntry(from pasteboard: NSPasteboard) -> ClipboardEntry? {
+        let app = NSWorkspace.shared.frontmostApplication
+        let name = app?.localizedName
+        let bundle = app?.bundleIdentifier
         if let s = pasteboard.string(forType: .string) {
             let normalized = s.trimmingCharacters(in: .whitespacesAndNewlines)
             guard !normalized.isEmpty else { return nil }
             let hash = sha256Hex(Data(normalized.utf8))
-            return ClipboardEntry(kind: .text, string: normalized, image: nil, date: Date(), dataHash: hash)
+            return ClipboardEntry(kind: .text, string: normalized, image: nil, date: Date(), dataHash: hash, appName: name, bundleIdentifier: bundle)
         }
 
         if let item = pasteboard.pasteboardItems?.first {
@@ -97,7 +102,7 @@ class ClipboardHistoryManager: ObservableObject {
                                 let text = attr.string.trimmingCharacters(in: .whitespacesAndNewlines)
                                 if !text.isEmpty {
                                     let hash = sha256Hex(Data(text.utf8))
-                                    return ClipboardEntry(kind: .text, string: text, image: nil, date: Date(), dataHash: hash)
+                                    return ClipboardEntry(kind: .text, string: text, image: nil, date: Date(), dataHash: hash, appName: name, bundleIdentifier: bundle)
                                 }
                             }
                         } else if type == .html {
@@ -105,14 +110,14 @@ class ClipboardHistoryManager: ObservableObject {
                                 let text = attr.string.trimmingCharacters(in: .whitespacesAndNewlines)
                                 if !text.isEmpty {
                                     let hash = sha256Hex(Data(text.utf8))
-                                    return ClipboardEntry(kind: .text, string: text, image: nil, date: Date(), dataHash: hash)
+                                    return ClipboardEntry(kind: .text, string: text, image: nil, date: Date(), dataHash: hash, appName: name, bundleIdentifier: bundle)
                                 }
                             }
                         } else if let text = String(data: data, encoding: .utf8) {
                             let normalized = text.trimmingCharacters(in: .whitespacesAndNewlines)
                             if !normalized.isEmpty {
                                 let hash = sha256Hex(Data(normalized.utf8))
-                                return ClipboardEntry(kind: .text, string: normalized, image: nil, date: Date(), dataHash: hash)
+                                return ClipboardEntry(kind: .text, string: normalized, image: nil, date: Date(), dataHash: hash, appName: name, bundleIdentifier: bundle)
                             }
                         }
                     }
@@ -123,25 +128,28 @@ class ClipboardHistoryManager: ObservableObject {
     }
 
     private func readImageEntry(from pasteboard: NSPasteboard) -> ClipboardEntry? {
+        let app = NSWorkspace.shared.frontmostApplication
+        let name = app?.localizedName
+        let bundle = app?.bundleIdentifier
         // TIFF
         if let data = pasteboard.data(forType: .tiff), let img = NSImage(data: data) {
             let hash = sha256Hex(data)
-            return ClipboardEntry(kind: .image, string: nil, image: img, date: Date(), dataHash: hash)
+            return ClipboardEntry(kind: .image, string: nil, image: img, date: Date(), dataHash: hash, appName: name, bundleIdentifier: bundle)
         }
         // PNG
         let pngType = NSPasteboard.PasteboardType("public.png")
         if let data = pasteboard.data(forType: pngType), let img = NSImage(data: data) {
             let hash = sha256Hex(data)
-            return ClipboardEntry(kind: .image, string: nil, image: img, date: Date(), dataHash: hash)
+            return ClipboardEntry(kind: .image, string: nil, image: img, date: Date(), dataHash: hash, appName: name, bundleIdentifier: bundle)
         }
         // General image class read
         if let images = pasteboard.readObjects(forClasses: [NSImage.self]) as? [NSImage], let img = images.first {
             // Compute hash from TIFF representation if available
             if let tiff = img.tiffRepresentation {
                 let hash = sha256Hex(tiff)
-                return ClipboardEntry(kind: .image, string: nil, image: img, date: Date(), dataHash: hash)
+                return ClipboardEntry(kind: .image, string: nil, image: img, date: Date(), dataHash: hash, appName: name, bundleIdentifier: bundle)
             }
-            return ClipboardEntry(kind: .image, string: nil, image: img, date: Date(), dataHash: UUID().uuidString)
+            return ClipboardEntry(kind: .image, string: nil, image: img, date: Date(), dataHash: UUID().uuidString, appName: name, bundleIdentifier: bundle)
         }
         return nil
     }

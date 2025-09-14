@@ -303,6 +303,8 @@ struct ContentView: View {
                         NotchHomeView(albumArtNamespace: albumArtNamespace)
                     case .shelf:
                         NotchShelfView()
+                    case .clipboard:
+                        NotchClipboardView()
                     }
                 }
             }

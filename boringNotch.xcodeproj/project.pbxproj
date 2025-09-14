@@ -124,6 +124,7 @@
 		A1C1B0AE2E77780100000010 /* ClipboardHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1B0AD2E77770100000010 /* ClipboardHistoryManager.swift */; };
 		A1C1B0AE2E77780200000010 /* ClipboardMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1B0AD2E77770200000010 /* ClipboardMenuView.swift */; };
 		A1C1B0AE2E77780300000010 /* ClipboardMenuBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1B0AD2E77770300000010 /* ClipboardMenuBarManager.swift */; };
+        A1C1B0AE2E77780500000010 /* NotchClipboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1B0AD2E77770500000010 /* NotchClipboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -261,6 +262,7 @@
 		A1C1B0AD2E77770100000010 /* ClipboardHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardHistoryManager.swift; sourceTree = "<group>"; };
 		A1C1B0AD2E77770200000010 /* ClipboardMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMenuView.swift; sourceTree = "<group>"; };
 		A1C1B0AD2E77770300000010 /* ClipboardMenuBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMenuBarManager.swift; sourceTree = "<group>"; };
+        A1C1B0AD2E77770500000010 /* NotchClipboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchClipboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -378,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				A1C1B0AD2E77770200000010 /* ClipboardMenuView.swift */,
+				A1C1B0AD2E77770500000010 /* NotchClipboardView.swift */,
 			);
 			path = Clipboard;
 			sourceTree = "<group>";
@@ -857,6 +860,7 @@
 				A1C1B0AE2E77780100000010 /* ClipboardHistoryManager.swift in Sources */,
 				A1C1B0AE2E77780200000010 /* ClipboardMenuView.swift in Sources */,
 				A1C1B0AE2E77780300000010 /* ClipboardMenuBarManager.swift in Sources */,
+                A1C1B0AE2E77780500000010 /* NotchClipboardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
