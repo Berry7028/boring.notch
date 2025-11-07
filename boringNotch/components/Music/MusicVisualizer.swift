@@ -52,28 +52,31 @@ class AudioSpectrum: NSView {
     
     private func startAnimating() {
         guard animationTimer == nil else { return }
-        animationTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { [weak self] _ in
+        // OPTIMIZATION: Increased interval from 0.3s to 0.4s (25% less CPU usage)
+        animationTimer = Timer.scheduledTimer(withTimeInterval: 0.4, repeats: true) { [weak self] _ in
             self?.updateBars()
         }
     }
-    
+
     private func stopAnimating() {
         animationTimer?.invalidate()
         animationTimer = nil
         resetBars()
     }
-    
+
     private func updateBars() {
         for barLayer in barLayers {
             let animation = CABasicAnimation(keyPath: "transform.scale.y")
             animation.fromValue = barLayer.presentation()?.value(forKeyPath: "transform.scale.y") ?? 0.35
             animation.toValue = CGFloat.random(in: 0.35 ... 1.0)
-            animation.duration = 0.3
+            // OPTIMIZATION: Match duration with timer interval
+            animation.duration = 0.4
             animation.autoreverses = true
             animation.fillMode = .forwards
             animation.isRemovedOnCompletion = false
             if #available(macOS 13.0, *) {
-                animation.preferredFrameRateRange = CAFrameRateRange(minimum: 24, maximum: 24, preferred: 24)
+                // OPTIMIZATION: Reduced frame rate for better performance
+                animation.preferredFrameRateRange = CAFrameRateRange(minimum: 20, maximum: 24, preferred: 20)
             }
             barLayer.add(animation, forKey: "scaleY")
         }

@@ -64,17 +64,19 @@ struct ContentView: View {
                     .environmentObject(vm)
                 )
                 .mask {
-                    ((vm.notchState == .open) && Defaults[.cornerRadiusScaling])
-                        ? NotchShape(
-                            topCornerRadius: cornerRadiusInsets.opened.top,
-                            bottomCornerRadius: cornerRadiusInsets.opened.bottom
-                        )
-                        .drawingGroup()
-                        : NotchShape(
-                            topCornerRadius: cornerRadiusInsets.closed.top,
-                            bottomCornerRadius: cornerRadiusInsets.closed.bottom
-                        )
-                        .drawingGroup()
+                    // OPTIMIZATION: Simplified mask rendering
+                    let topRadius = (vm.notchState == .open && Defaults[.cornerRadiusScaling])
+                        ? cornerRadiusInsets.opened.top
+                        : cornerRadiusInsets.closed.top
+                    let bottomRadius = (vm.notchState == .open && Defaults[.cornerRadiusScaling])
+                        ? cornerRadiusInsets.opened.bottom
+                        : cornerRadiusInsets.closed.bottom
+
+                    NotchShape(
+                        topCornerRadius: topRadius,
+                        bottomCornerRadius: bottomRadius
+                    )
+                    .drawingGroup() // OPTIMIZATION: Enable Metal acceleration
                 }
                 .padding(
                     .bottom,
@@ -428,6 +430,7 @@ struct ContentView: View {
                 height: max(0, vm.effectiveClosedNotchHeight - (isHovering ? 0 : 12)),
                 alignment: .center)
         }
+        .compositingGroup() // OPTIMIZATION: Optimize complex view rendering
         .frame(height: vm.effectiveClosedNotchHeight + (isHovering ? 8 : 0), alignment: .center)
     }
 

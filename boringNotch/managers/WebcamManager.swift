@@ -171,7 +171,9 @@ class WebcamManager: NSObject, ObservableObject {
                 }
                 
                 session.beginConfiguration()
-                session.sessionPreset = .high
+                // OPTIMIZATION: Use medium preset instead of high for better performance
+                // The notch display is small, so high resolution is unnecessary
+                session.sessionPreset = .medium
                 session.addInput(videoInput)
                 
                 let videoOutput = AVCaptureVideoDataOutput()

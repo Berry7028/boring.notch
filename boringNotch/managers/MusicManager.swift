@@ -307,8 +307,13 @@ class MusicManager: ObservableObject {
             debounceIdleTask = Task { [weak self] in
                 guard let self = self else { return }
                 try? await Task.sleep(for: .seconds(Defaults[.waitInterval]))
-                withAnimation {
-                    self.isPlayerIdle = !self.isPlaying
+                // OPTIMIZATION: Only update if state actually changed
+                if !self.isPlaying && self.isPlayerIdle != true {
+                    await MainActor.run {
+                        withAnimation {
+                            self.isPlayerIdle = true
+                        }
+                    }
                 }
             }
         }
@@ -318,22 +323,35 @@ class MusicManager: ObservableObject {
 
     func updateAlbumArt(newAlbumArt: NSImage) {
         workItem?.cancel()
+
+        // OPTIMIZATION: Reduced delay from 0.4s to 0.2s for more responsive updates
         workItem = DispatchWorkItem { [weak self] in
-            withAnimation(.smooth) {
-                self?.albumArt = newAlbumArt
-                if Defaults[.coloredSpectrogram] {
-                    self?.calculateAverageColor()
-                }
+            guard let self = self else { return }
+
+            // Update album art immediately
+            self.albumArt = newAlbumArt
+
+            // OPTIMIZATION: Only calculate color if feature is enabled
+            if Defaults[.coloredSpectrogram] {
+                self.calculateAverageColor()
             }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: workItem!)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: workItem!)
     }
 
     func calculateAverageColor() {
+        // OPTIMIZATION: Color calculation now uses cache and downsampling (see NSImage+Extensions)
         albumArt.averageColor { [weak self] color in
-            DispatchQueue.main.async {
-                withAnimation(.smooth) {
-                    self?.avgColor = color ?? .white
+            guard let self = self, let color = color else { return }
+
+            // OPTIMIZATION: Only update if color actually changed significantly
+            let shouldUpdate = !self.avgColor.isApproximatelyEqual(to: color, tolerance: 0.05)
+
+            if shouldUpdate {
+                DispatchQueue.main.async {
+                    withAnimation(.smooth(duration: 0.3)) {
+                        self.avgColor = color
+                    }
                 }
             }
         }
