@@ -125,6 +125,8 @@
 		A1C1B0AE2E77780200000010 /* ClipboardMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1B0AD2E77770200000010 /* ClipboardMenuView.swift */; };
 		A1C1B0AE2E77780300000010 /* ClipboardMenuBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1B0AD2E77770300000010 /* ClipboardMenuBarManager.swift */; };
         A1C1B0AE2E77780500000010 /* NotchClipboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1B0AD2E77770500000010 /* NotchClipboardView.swift */; };
+	A1D1C0AE2E88880100000020 /* MemoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D1C0AD2E88880100000020 /* MemoManager.swift */; };
+	A1D1C0AE2E88880200000020 /* NotchMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D1C0AD2E88880200000020 /* NotchMemoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -263,6 +265,8 @@
 		A1C1B0AD2E77770200000010 /* ClipboardMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMenuView.swift; sourceTree = "<group>"; };
 		A1C1B0AD2E77770300000010 /* ClipboardMenuBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMenuBarManager.swift; sourceTree = "<group>"; };
         A1C1B0AD2E77770500000010 /* NotchClipboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchClipboardView.swift; sourceTree = "<group>"; };
+	A1D1C0AD2E88880100000020 /* MemoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoManager.swift; sourceTree = "<group>"; };
+	A1D1C0AD2E88880200000020 /* NotchMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchMemoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -372,6 +376,7 @@
 				A1B2C3D42E00000100000001 /* AirPodsConnectToast.swift */,
 				A1B2C3D62E00000100000001 /* LockStatusBanner.swift */,
 				A1C1B0AF2E77780300000011 /* Clipboard */,
+				A1D1C0AF2E88880300000021 /* Memo */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -383,6 +388,14 @@
 				A1C1B0AD2E77770500000010 /* NotchClipboardView.swift */,
 			);
 			path = Clipboard;
+			sourceTree = "<group>";
+		};
+		A1D1C0AF2E88880300000021 /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				A1D1C0AD2E88880200000020 /* NotchMemoView.swift */,
+			);
+			path = Memo;
 			sourceTree = "<group>";
 		};
 		147163B52C5D804B0068B555 /* managers */ = {
@@ -399,6 +412,7 @@
 
 				A1C1B0AD2E77770100000010 /* ClipboardHistoryManager.swift */,
 				A1C1B0AD2E77770300000010 /* ClipboardMenuBarManager.swift */,
+				A1D1C0AD2E88880100000020 /* MemoManager.swift */,
 			);
 			path = managers;
 			sourceTree = "<group>";
@@ -851,6 +865,8 @@
 				11CFC6612E097F6800748C80 /* PermissionsRequestView.swift in Sources */,
 				14D570D22C5F6C6A0011E668 /* BoringExtrasMenu.swift in Sources */,
 				14288DDC2C6E015000B9F80C /* AudioPlayer.swift in Sources */,
+				A1D1C0AE2E88880100000020 /* MemoManager.swift in Sources */,
+				A1D1C0AE2E88880200000020 /* NotchMemoView.swift in Sources */,
 				149E0B972C737D00006418B1 /* WebcamManager.swift in Sources */,
 				14288E0C2C6F8EC000B9F80C /* AppIcons.swift in Sources */,
 				B1C448982C972CC4001F0858 /* ListItemPopover.swift in Sources */,
