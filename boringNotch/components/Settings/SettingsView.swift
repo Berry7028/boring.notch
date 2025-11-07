@@ -931,6 +931,7 @@ struct Appearance: View {
             Section {
                 Toggle("Always show tabs", isOn: $coordinator.alwaysShowTabs)
                 Defaults.Toggle("Settings icon in notch", key: .settingsIconInNotch)
+                Defaults.Toggle("Show memo widget", key: .showMemoWidget)
                 Defaults.Toggle("Enable window shadow", key: .enableShadow)
                 Defaults.Toggle("Corner radius scaling", key: .cornerRadiusScaling)
                 Defaults.Toggle("Use simpler close animation", key: .useModernCloseAnimation)

@@ -44,6 +44,10 @@ struct BoringHeader: View {
 
             HStack(spacing: 4) {
                 if vm.notchState == .open {
+                    // Memo widget
+                    if Defaults[.showMemoWidget] {
+                        NotchMemoView()
+                    }
                     if Defaults[.showMirror] {
                         Button(action: {
                             vm.toggleCameraPreview()

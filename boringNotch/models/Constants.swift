@@ -157,7 +157,10 @@ extension Defaults.Keys {
     
     // MARK: Clipboard
     static let enableClipboardMenuBar = Key<Bool>("enableClipboardMenuBar", default: true)
-    
+
+    // MARK: Memo
+    static let showMemoWidget = Key<Bool>("showMemoWidget", default: true)
+
     // Helper to determine the default media controller based on macOS version
     static var defaultMediaController: MediaControllerType {
         if #available(macOS 15.4, *) {
