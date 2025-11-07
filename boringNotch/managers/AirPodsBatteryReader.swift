@@ -117,8 +117,16 @@ final class AirPodsBatteryReader {
         // 2) Left/Right — average if both available; otherwise whichever ear we have
         let left = Self.percentInt(dict, keys: ["BatteryPercentLeft", "Battery Percent Left"]).flatMap(Self.normalize0to100)
         let right = Self.percentInt(dict, keys: ["BatteryPercentRight", "Battery Percent Right"]).flatMap(Self.normalize0to100)
-        if let l = left, let r = right, (l >= 0 || r >= 0) {
-            return Double(l + r) / 2.0 / 100.0
+        if let l = left, let r = right {
+            // If both values are valid and greater than 0, take the average
+            if l > 0 && r > 0 {
+                return Double(l + r) / 2.0 / 100.0
+            }
+            // If one is 0 (e.g., in case), use the non-zero value
+            if l > 0 { return Double(l) / 100.0 }
+            if r > 0 { return Double(r) / 100.0 }
+            // Both are 0
+            return 0.0
         }
         if let l = left { return Double(l) / 100.0 }
         if let r = right { return Double(r) / 100.0 }
@@ -210,8 +218,16 @@ final class AirPodsBatteryReader {
 
         let left = value(for: "BatteryPercentLeft") ?? value(for: "Battery Percent Left")
         let right = value(for: "BatteryPercentRight") ?? value(for: "Battery Percent Right")
-        if let l = left.flatMap(Self.normalize0to100), let r = right.flatMap(Self.normalize0to100), (l >= 0 || r >= 0) {
-            return Double(l + r) / 2.0 / 100.0
+        if let l = left.flatMap(Self.normalize0to100), let r = right.flatMap(Self.normalize0to100) {
+            // If both values are valid and greater than 0, take the average
+            if l > 0 && r > 0 {
+                return Double(l + r) / 2.0 / 100.0
+            }
+            // If one is 0 (e.g., in case), use the non-zero value
+            if l > 0 { return Double(l) / 100.0 }
+            if r > 0 { return Double(r) / 100.0 }
+            // Both are 0
+            return 0.0
         }
         if let l = left.flatMap(Self.normalize0to100) { return Double(l) / 100.0 }
         if let r = right.flatMap(Self.normalize0to100) { return Double(r) / 100.0 }
