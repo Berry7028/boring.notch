@@ -17,7 +17,7 @@
 
 <!--Welcome to **Boring.Notch**, the coolest way to make your MacBook's notch the star of the show! Forget about those boring status bars—our notch turns into a dynamic music control center, complete with a snazzy visualizer and all the music controls you need. It's like having a mini concert right at the top of your screen! -->
 
-Say hello to **Boring Notch**, the coolest way to make your MacBook’s notch the star of the show! Say goodbye to boring status bars: with Boring Notch, your notch transforms into a dynamic music control center, complete with a vibrant visualizer and all the essential music controls you need. But that’s just the start! Boring Notch also offers calendar integration, a handy file shelf with AirDrop support and more!
+**Boring Notch**へようこそ！MacBookのノッチを主役にする最高の方法です！退屈なステータスバーとはおさらば。Boring Notchを使えば、ノッチが鮮やかなビジュアライザーと必要な音楽コントロールを備えたダイナミックな音楽コントロールセンターに変身します。しかし、これは始まりにすぎません！Boring Notchは、カレンダー統合、AirDropサポート付きの便利なファイルシェルフなど、さらに多くの機能を提供します！
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2d5f69c1-6e7b-4bc2-a6f1-bb9e27cf88a8" alt="Demo GIF" />
@@ -36,55 +36,55 @@ Say hello to **Boring Notch**, the coolest way to make your MacBook’s notch th
 - [Buy us a coffee!](#buy-us-a-coffee)
 - [Acknowledgments](#-acknowledgments)-->
 
-## Installation
+## インストール
 
-**System Requirements:**  
-- macOS **14 Sonoma** or later  
-- Apple Silicon or Intel Mac
+**システム要件:**
+- macOS **14 Sonoma** 以降
+- Apple Silicon または Intel Mac
 
 ---
 > [!IMPORTANT]
-> We don't have an Apple Developer account yet. The application will show a popup on first launch that the app is from an unidentified developer.
-> 1. Click **OK** to close the popup.
-> 2. Open **System Settings** > **Privacy & Security**.
-> 3. Scroll down and click **Open Anyway** next to the warning about the app.
-> 4. Confirm your choice if prompted.
+> まだApple Developer アカウントを持っていません。初回起動時に、未確認の開発元からのアプリケーションであることを示すポップアップが表示されます。
+> 1. **OK** をクリックしてポップアップを閉じます。
+> 2. **システム設定** > **プライバシーとセキュリティ** を開きます。
+> 3. 下にスクロールして、アプリに関する警告の横にある **このまま開く** をクリックします。
+> 4. プロンプトが表示されたら選択を確認します。
 >
-> You only need to do this once.
+> これは一度だけ行う必要があります。
 
 
-### Option 1: Download and Install Manually
+### オプション1: 手動でダウンロードしてインストール
 <a href="https://github.com/TheBoredTeam/boring.notch/releases/latest/download/boringNotch.dmg" target="_self"><img width="200" src="https://github.com/user-attachments/assets/e3179be1-8416-4b8a-b417-743e1ecc67d6" alt="Download for macOS" /></a>
 
 ---
 
-### Option 2: Install via Homebrew
+### オプション2: Homebrew経由でインストール
 
-You can also install the app using [Homebrew](https://brew.sh):
+[Homebrew](https://brew.sh)を使用してアプリをインストールすることもできます：
 
 ```bash
 brew install --cask TheBoredTeam/boring-notch/boring-notch --no-quarantine
 ```
 
-## Usage
+## 使い方
 
-- Launch the app, and voilà—your notch is now the coolest part of your screen.
-- Hover over the notch to see it expand and reveal all its secrets.
-- Use the controls to manage your music like a rockstar.
+- アプリを起動すれば、ノッチが画面で最もクールな部分になります。
+- ノッチの上にカーソルを合わせると、展開してすべての機能が表示されます。
+- コントロールを使用してロックスターのように音楽を管理しましょう。
 
-## 📋 Roadmap
-- [x] Playback live activity 🎧
-- [x] Calendar integration 📆
-- [x] Mirror 📷
-- [x] Charging indicator and current percentage 🔋
-- [x] Customizable gesture control 👆🏻
-- [x] Shelf functionality with AirDrop 📚
-- [x] Notch sizing customization, finetuning on different display sizes 🖥️
-- [ ] Reminders integration ☑️
-- [ ] Customizable Layout options 🛠️
-- [ ] Extension system 🧩
-- [ ] System HUD replacements (volume, brightness, backlight) 🎚️💡⌨️
-- [ ] Notifications (under consideration) 🔔
+## 📋 ロードマップ
+- [x] 再生ライブアクティビティ 🎧
+- [x] カレンダー統合 📆
+- [x] ミラー 📷
+- [x] 充電インジケーターと現在のパーセンテージ 🔋
+- [x] カスタマイズ可能なジェスチャー制御 👆🏻
+- [x] AirDrop対応のシェルフ機能 📚
+- [x] ノッチサイズのカスタマイズ、さまざまなディスプレイサイズでの微調整 🖥️
+- [ ] リマインダー統合 ☑️
+- [ ] カスタマイズ可能なレイアウトオプション 🛠️
+- [ ] 拡張システム 🧩
+- [ ] システムHUD置き換え（音量、輝度、バックライト）🎚️💡⌨️
+- [ ] 通知（検討中）🔔
 <!-- - [ ] Clipboard history manager 📌 `Extension` -->
 <!-- - [ ] Download indicator of different browsers (Safari, Chromium browsers, Firefox) 🌍 `Extension`-->
 <!-- - [ ] Customizable function buttons 🎛️ -->
@@ -94,64 +94,63 @@ brew install --cask TheBoredTeam/boring-notch/boring-notch --no-quarantine
 > [!NOTE]
 > We’re hard at work on some awesome extensions! Stay tuned, and we’ll keep you updated as soon as they’re released. -->
 
-## Building from Source
+## ソースからビルド
 
-### Prerequisites
+### 前提条件
 
-- **macOS 14 or later**: If you’re not on the latest macOS, we might need to send a search party.
-- **Xcode 16 or later**: This is where the magic happens, so make sure it’s up-to-date.
+- **macOS 14以降**: 最新のmacOSを使用していない場合は、捜索隊を送る必要があるかもしれません。
+- **Xcode 16以降**: ここで魔法が起こるので、最新の状態であることを確認してください。
 
-### Installation
+### インストール
 
-1. **Clone the Repository**:
+1. **リポジトリをクローン**:
    ```bash
    git clone https://github.com/TheBoredTeam/boring.notch.git
    cd boring.notch
    ```
 
-2. **Open the Project in Xcode**:
+2. **Xcodeでプロジェクトを開く**:
    ```bash
    open boringNotch.xcodeproj
    ```
 
-3. **Build and Run**:
-    - Click the "Run" button or press `Cmd + R`. Watch the magic unfold!
+3. **ビルドして実行**:
+    - 「実行」ボタンをクリックするか、`Cmd + R` を押します。魔法が展開するのを見守りましょう！
 
-## 🤝 Contributing
+## 🤝 コントリビューション
 
-We’re all about good vibes and awesome contributions! Here’s how you can join the fun:
+私たちは良い雰囲気と素晴らしい貢献を大切にしています！参加方法は次のとおりです：
 
-1. **Fork the Repo**: Click that shiny "Fork" button and make your own version.
-2. **Clone Your Fork**:
+1. **リポジトリをフォーク**: 光り輝く「Fork」ボタンをクリックして、自分のバージョンを作成します。
+2. **フォークをクローン**:
    ```bash
    git clone https://github.com/{your-name}/boring.notch.git
-   # Replace {your-name} with your GitHub username
+   # {your-name}をあなたのGitHubユーザー名に置き換えてください
    ```
-3. **Make sure to use `dev` branch as base.**
-4. **Create a New Branch**:
+3. **ベースとして `dev` ブランチを使用してください。**
+4. **新しいブランチを作成**:
    ```bash
    git checkout -b feature/{your-feature-name}
-   # Replace {your-feature-name} with a descriptive and concise name for your branch
-   # It is best practice to use only alphanumeric characters, write words in lowercase
-   # and seperate words with a single hyphen
+   # {your-feature-name}をブランチの説明的で簡潔な名前に置き換えてください
+   # 英数字のみを使用し、単語を小文字で書き、単語をハイフン1つで区切るのがベストプラクティスです
    ```
-5. **Make Your Changes**: Add that feature or fix that bug.
-6. **Commit Your Changes**:
+5. **変更を加える**: 機能を追加するか、バグを修正します。
+6. **変更をコミット**:
    ```bash
-   git commit -m "insert descriptive message here"
+   git commit -m "わかりやすいメッセージをここに挿入"
    ```
-7. **Push to Your Fork**:
+7. **フォークにプッシュ**:
    ```bash
    git push origin feature/{your-feature-name}
-   # Remember to replace {your-feature-name} with the name you chose
+   # 選択した名前に {your-feature-name} を置き換えることを忘れないでください
    ```
-8. **Create a Pull Request**: Head to the original repository and click on "New Pull Request." Fill in the required details, **make sure the base branch is set to `dev`**, and submit your PR. Let’s see what you’ve got!
+8. **プルリクエストを作成**: 元のリポジトリに移動し、「New Pull Request」をクリックします。必要な詳細を入力し、**ベースブランチが `dev` に設定されていることを確認**して、PRを送信します。あなたの作品を見せてください！
 
-## Join our Discord Server
+## Discordサーバーに参加
 
 <a href="https://discord.gg/GvYcYpAKTu" target="_blank"><img src="https://iili.io/28m3GHv.png" alt="Join The Boring Server!" style="height: 60px !important;width: 217px !important;" ></a>
 
-## Star History
+## スター履歴
 
 <a href="https://www.star-history.com/#TheBoredTeam/boring.notch&Timeline">
  <picture>
@@ -161,18 +160,18 @@ We’re all about good vibes and awesome contributions! Here’s how you can joi
  </picture>
 </a>
 
-## Buy us a coffee!
+## コーヒーをおごってください！
 
 <a href="https://www.buymeacoffee.com/jfxh67wvfxq" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
-## 🎉 Acknowledgments
+## 🎉 謝辞
 
-We would like to express our appreciation to the developers of [NotchDrop](https://github.com/Lakr233/NotchDrop), an open-source project that has been instrumental in developing the "Shelf" feature in Boring Notch. Special thanks to Lakr233 for their contributions to NotchDrop and to [Hugo Persson](https://github.com/Hugo-Persson) for integrating it into our project.
+Boring Notchの「シェルフ」機能の開発に尽力してくれた、オープンソースプロジェクトである[NotchDrop](https://github.com/Lakr233/NotchDrop)の開発者に感謝の意を表します。NotchDropへの貢献に対するLakr233、およびプロジェクトへの統合を行った[Hugo Persson](https://github.com/Hugo-Persson)に特別な感謝を捧げます。
 
-### Icon credits: [@maxtron95](https://github.com/maxtron95)
-### Website credits: [@himanshhhhuv](https://github.com/himanshhhhuv)
+### アイコンクレジット: [@maxtron95](https://github.com/maxtron95)
+### ウェブサイトクレジット: [@himanshhhhuv](https://github.com/himanshhhhuv)
 
-- **SwiftUI**: For making us look like coding wizards.
-- **You**: For being awesome and checking out **boring.notch**!
+- **SwiftUI**: 私たちをコーディングの魔法使いのように見せてくれてありがとう。
+- **あなた**: 素晴らしい人で、**boring.notch**をチェックしてくれてありがとう！
 
 

@@ -1,11 +1,11 @@
-# Security Policy
+# セキュリティポリシー
 
-## Reporting a Vulnerability
+## 脆弱性の報告
 
-The Bored Team and community take security bugs in Boring Notch seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.
+Bored Teamとコミュニティは、Boring Notchのセキュリティバグを真剣に受け止めています。責任を持って調査結果を開示していただいた努力に感謝し、貢献を認めるためにあらゆる努力をします。
 
-To report a security issue, please use the GitHub Security Advisory ["Report a Vulnerability"](https://github.com/TheBoredTeam/boring.notch/security/advisories/new) tab.
+セキュリティ問題を報告するには、GitHub Security Advisoryの["Report a Vulnerability"](https://github.com/TheBoredTeam/boring.notch/security/advisories/new)タブを使用してください。
 
-The Bored Team will send a response indicating the next steps in handling your report. After the initial reply to your report, we will keep you informed of the progress towards a fix and full announcement, and may ask for additional information or guidance.
+Bored Teamは、報告の処理における次のステップを示す返信を送信します。報告への最初の返信の後、修正と完全な発表に向けた進捗状況をお知らせし、追加情報やガイダンスをお願いする場合があります。
 
-Report security bugs in third-party dependencies to the person or team maintaining the package or dependency.
+サードパーティの依存関係のセキュリティバグは、パッケージまたは依存関係を保守している個人またはチームに報告してください。
