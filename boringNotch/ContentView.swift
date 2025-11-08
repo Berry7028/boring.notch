@@ -464,7 +464,7 @@ struct ContentView: View {
         }
     }
 
-    // MARK: - Hover Management
+    // MARK: - ホバー管理
 
     /// Handle hover state changes with debouncing
     private func handleHover(_ hovering: Bool) {
@@ -527,7 +527,7 @@ struct ContentView: View {
         }
     }
 
-    // MARK: - Gesture Handling
+    // MARK: - ジェスチャー処理
 
     private func handleDownGesture(translation: CGFloat, phase: NSEvent.Phase) {
         guard vm.notchState == .closed else { return }

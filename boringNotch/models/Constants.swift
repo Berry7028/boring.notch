@@ -36,37 +36,37 @@ enum HideNotchOption: String, Defaults.Serializable {
     case never
 }
 
-// Define notification names at file scope
+// ファイルスコープで通知名を定義
 extension Notification.Name {
     static let mediaControllerChanged = Notification.Name("mediaControllerChanged")
 }
 
-// Media controller types for selection in settings
+// 設定で選択するためのメディアコントローラータイプ
 enum MediaControllerType: String, CaseIterable, Identifiable, Defaults.Serializable {
     case nowPlaying = "Now Playing"
     case appleMusic = "Apple Music"
     case spotify = "Spotify"
     case youtubeMusic = "YouTube Music"
-    
+
     var id: String { self.rawValue }
 }
 
-// Sneak peek styles for selection in settings
+// 設定で選択するためのスニークピークスタイル
 enum SneakPeekStyle: String, CaseIterable, Identifiable, Defaults.Serializable {
     case standard = "Default"
     case inline = "Inline"
-    
+
     var id: String { self.rawValue }
 }
 
 extension Defaults.Keys {
-        // MARK: General
+        // MARK: 一般
     static let menubarIcon = Key<Bool>("menubarIcon", default: true)
     static let showOnAllDisplays = Key<Bool>("showOnAllDisplays", default: false)
     static let automaticallySwitchDisplay = Key<Bool>("automaticallySwitchDisplay", default: true)
     static let releaseName = Key<String>("releaseName", default: "Flying Rabbit 🐇🪽")
-    
-        // MARK: Behavior
+
+        // MARK: 動作
     static let minimumHoverDuration = Key<TimeInterval>("minimumHoverDuration", default: 0.3)
     static let enableHaptics = Key<Bool>("enableHaptics", default: true)
     static let openNotchOnHover = Key<Bool>("openNotchOnHover", default: true)
@@ -82,8 +82,8 @@ extension Defaults.Keys {
     static let nonNotchHeight = Key<CGFloat>("nonNotchHeight", default: 32)
     static let notchHeight = Key<CGFloat>("notchHeight", default: 32)
         //static let openLastTabByDefault = Key<Bool>("openLastTabByDefault", default: false)
-    
-        // MARK: Appearance
+
+        // MARK: 外観
     static let showEmojis = Key<Bool>("showEmojis", default: false)
         //static let alwaysShowTabs = Key<Bool>("alwaysShowTabs", default: true)
     static let showMirror = Key<Bool>("showMirror", default: false)
@@ -105,60 +105,60 @@ extension Defaults.Keys {
     static let useMusicVisualizer = Key<Bool>("useMusicVisualizer", default: true)
     static let customVisualizers = Key<[CustomVisualizer]>("customVisualizers", default: [])
     static let selectedVisualizer = Key<CustomVisualizer?>("selectedVisualizer", default: nil)
-    // App Icon
+    // アプリアイコン
     static let selectedAppIconName = Key<String>("selectedAppIconName", default: "logo2")
-    
-        // MARK: Gestures
+
+        // MARK: ジェスチャー
     static let enableGestures = Key<Bool>("enableGestures", default: true)
     static let closeGestureEnabled = Key<Bool>("closeGestureEnabled", default: true)
     static let gestureSensitivity = Key<CGFloat>("gestureSensitivity", default: 200.0)
-    
-        // MARK: Media playback
+
+        // MARK: メディア再生
     static let coloredSpectrogram = Key<Bool>("coloredSpectrogram", default: true)
     static let enableSneakPeek = Key<Bool>("enableSneakPeek", default: false)
     static let sneakPeekStyles = Key<SneakPeekStyle>("sneakPeekStyles", default: .standard)
     static let enableFullscreenMediaDetection = Key<Bool>("enableFullscreenMediaDetection", default: true)
     static let waitInterval = Key<Double>("waitInterval", default: 3)
     static let showShuffleAndRepeat = Key<Bool>("showShuffleAndRepeat", default: false)
-    
-        // MARK: Battery
+
+        // MARK: バッテリー
     static let showPowerStatusNotifications = Key<Bool>("showPowerStatusNotifications", default: true)
     static let showBatteryIndicator = Key<Bool>("showBatteryIndicator", default: true)
     static let showBatteryPercentage = Key<Bool>("showBatteryPercentage", default: true)
     static let showPowerStatusIcons = Key<Bool>("showPowerStatusIcons", default: true)
-    
-        // MARK: Downloads
+
+        // MARK: ダウンロード
     static let enableDownloadListener = Key<Bool>("enableDownloadListener", default: true)
     static let enableSafariDownloads = Key<Bool>("enableSafariDownloads", default: true)
     static let selectedDownloadIndicatorStyle = Key<DownloadIndicatorStyle>("selectedDownloadIndicatorStyle", default: DownloadIndicatorStyle.progress)
     static let selectedDownloadIconStyle = Key<DownloadIconStyle>("selectedDownloadIconStyle", default: DownloadIconStyle.onlyAppIcon)
-    
+
         // MARK: HUD
     static let inlineHUD = Key<Bool>("inlineHUD", default: false)
     static let enableGradient = Key<Bool>("enableGradient", default: false)
     static let systemEventIndicatorShadow = Key<Bool>("systemEventIndicatorShadow", default: false)
     static let systemEventIndicatorUseAccent = Key<Bool>("systemEventIndicatorUseAccent", default: false)
-    
-        // MARK: Shelf
+
+        // MARK: シェルフ
     static let boringShelf = Key<Bool>("boringShelf", default: true)
     static let openShelfByDefault = Key<Bool>("openShelfByDefault", default: true)
-    
-        // MARK: Calendar
+
+        // MARK: カレンダー
     static let calendarSelectionState = Key<CalendarSelectionState>("calendarSelectionState", default: .all)
-    
-        // MARK: Fullscreen Media Detection
+
+        // MARK: フルスクリーンメディア検出
     static let hideNotchOption = Key<HideNotchOption>("hideNotchOption", default: .nowPlayingOnly)
-    
-    // MARK: Wobble Animation
+
+    // MARK: ぐらぐらアニメーション
     static let enableWobbleAnimation = Key<Bool>("enableWobbleAnimation", default: false)
-    
-    // MARK: Media Controller
+
+    // MARK: メディアコントローラー
     static let mediaController = Key<MediaControllerType>("mediaController", default: defaultMediaController)
-    
-    // MARK: Clipboard
+
+    // MARK: クリップボード
     static let enableClipboardMenuBar = Key<Bool>("enableClipboardMenuBar", default: true)
-    
-    // Helper to determine the default media controller based on macOS version
+
+    // macOSバージョンに基づいてデフォルトのメディアコントローラーを決定するヘルパー
     static var defaultMediaController: MediaControllerType {
         if #available(macOS 15.4, *) {
             return .appleMusic

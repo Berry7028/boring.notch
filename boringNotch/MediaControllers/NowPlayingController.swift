@@ -84,7 +84,7 @@ final class NowPlayingController: ObservableObject, MediaControllerProtocol {
         self.pipeHandler = nil
     }
 
-    // MARK: - Protocol Implementation
+    // MARK: - プロトコル実装
     func play() async {
         MRMediaRemoteSendCommandFunction(0, nil)
     }

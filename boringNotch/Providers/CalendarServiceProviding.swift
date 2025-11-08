@@ -137,7 +137,7 @@ class CalendarService: CalendarServiceProviding {
     }
 }
 
-// MARK: - Model Extensions
+// MARK: - モデル拡張
 
 extension CalendarModel {
     init(from calendar: EKCalendar) {

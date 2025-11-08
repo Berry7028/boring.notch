@@ -2,8 +2,8 @@
 //  FluidGlassMaterial.swift
 //  boringNotch
 //
-//  Apple Liquid Glass material - A dynamic, glass-like material with fluid highlights
-//  that react to motion and state. Complete recreation of Apple's Liquid Glass design.
+//  Apple Liquid Glassマテリアル - 動きと状態に反応する流動的なハイライトを持つ、
+//  ダイナミックなガラスのようなマテリアル。AppleのLiquid Glassデザインの完全再現。
 //
 
 import SwiftUI
@@ -75,7 +75,7 @@ struct FluidGlassMaterial: View {
         }
     }
     
-    // MARK: - Liquid Glass Refraction Layer
+    // MARK: - リキッドグラス屈折レイヤー
 
     private func drawLiquidGlassRefraction(ctx: GraphicsContext, size: CGSize, timeline: TimelineView<some TimelineSchedule, some View>.Context) {
         let t = timeline.date.timeIntervalSinceReferenceDate
@@ -118,7 +118,7 @@ struct FluidGlassMaterial: View {
         }
     }
 
-    // MARK: - Fluid Effects
+    // MARK: - 流体エフェクト
 
     private func drawFluidEffects(ctx: GraphicsContext, size: CGSize, timeline: TimelineView<some TimelineSchedule, some View>.Context) {
         let t = timeline.date.timeIntervalSinceReferenceDate
@@ -138,7 +138,7 @@ struct FluidGlassMaterial: View {
         drawRippleEffect(ctx: ctx, size: size, t: t, speed: speed)
     }
     
-    // MARK: - Liquid Streaks (Smooth flowing highlights)
+    // MARK: - リキッドストリーク（滑らかに流れるハイライト）
 
     private func drawLiquidStreaks(ctx: GraphicsContext, size: CGSize, t: TimeInterval, speed: Double) {
         let w = size.width
@@ -194,7 +194,7 @@ struct FluidGlassMaterial: View {
         }
     }
 
-    // MARK: - Ripple Effect
+    // MARK: - 波紋エフェクト
 
     private func drawRippleEffect(ctx: GraphicsContext, size: CGSize, t: TimeInterval, speed: Double) {
         let centerX = size.width * 0.5
@@ -237,7 +237,7 @@ struct FluidGlassMaterial: View {
         }
     }
     
-    // MARK: - Vertical Shimmers
+    // MARK: - 垂直シマー
 
     private func drawVerticalShimmers(ctx: GraphicsContext, size: CGSize, t: TimeInterval, speed: Double) {
         let w = size.width
@@ -281,7 +281,7 @@ struct FluidGlassMaterial: View {
         }
     }
     
-    // MARK: - Edge Fresnel (Glass edge refraction)
+    // MARK: - エッジフレネル（ガラス端の屈折）
 
     @ViewBuilder
     private var edgeFresnelView: some View {
@@ -333,7 +333,7 @@ struct FluidGlassMaterial: View {
         .allowsHitTesting(false)
     }
 
-    // MARK: - Depth Shadow (Material thickness simulation)
+    // MARK: - 深度シャドウ（マテリアルの厚みシミュレーション）
 
     @ViewBuilder
     private var depthShadowView: some View {
@@ -361,7 +361,7 @@ struct FluidGlassMaterial: View {
     }
 }
 
-// MARK: - Specular Highlight (Subtle light reflection)
+// MARK: - スペキュラーハイライト（微細な光の反射）
 
 private struct SpecularHighlight: View {
     var intensity: CGFloat
